@@ -88,7 +88,6 @@ extension  OnlyCharView {
         enum onlyCharTFSetup {
             static let onlyCharTFMaskString = "AAAAA-00000"
             static let onlyCharTFPlaceHolder = "wwwww-ddddd"
-            
         }
         enum LabelsTexts {
             static let onlyCharectersLabelText = "Only characters"

@@ -53,44 +53,44 @@ final class MainViewController: UIViewController {
         // titleLabel
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints{ make in
-            make.top.equalToSuperview().offset(92)
-            make.trailing.leading.equalToSuperview().inset(16)
-            make.height.equalTo(41)
+            make.top.equalToSuperview().offset(Constants.Constraints.titleTopToSuperViewConstraint) //(92)
+            make.trailing.leading.equalToSuperview().inset(Constants.Constraints.leadingConstraint) //(16)
+            make.height.equalTo(Constants.Constraints.titleLabelHeightConstraint) //(41)
         }
         // noDigitsView
         contentView.addSubview(noDigitsView)
         noDigitsView.snp.makeConstraints{make in
-            make.top.equalToSuperview().offset(163)
-            make.leading.trailing.equalToSuperview().inset(16)
-            make.height.equalTo(60)
+            make.top.equalToSuperview().offset(Constants.Constraints.noDigitsViewConstraint) //(163)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint) //(16)
+            make.height.equalTo(Constants.Constraints.heightConstraint)//(60)
         }
         // inputLimitView
         contentView.addSubview(inputLimitView)
         inputLimitView.snp.makeConstraints{make in
-            make.top.equalTo(noDigitsView.snp.bottom).offset(30)
-            make.leading.trailing.equalToSuperview().inset(16)
-            make.height.equalTo(60)
+            make.top.equalTo(noDigitsView.snp.bottom).offset(Constants.Constraints.topConstraint)//(30)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)//(16)
+            make.height.equalTo(Constants.Constraints.heightConstraint)//(60)
         }
         // onlyCharView
         contentView.addSubview(onlyCharView)
         onlyCharView.snp.makeConstraints{make in
-            make.top.equalTo(inputLimitView.snp.bottom).offset(30)
-            make.leading.trailing.equalToSuperview().inset(16)
-            make.height.equalTo(60)
+            make.top.equalTo(inputLimitView.snp.bottom).offset(Constants.Constraints.topConstraint)//(30)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)//(16)
+            make.height.equalTo(Constants.Constraints.heightConstraint)//(60)
         }
         // linkView
         contentView.addSubview(linkView)
         linkView.snp.makeConstraints{make in
-            make.top.equalTo(onlyCharView.snp.bottom).offset(30)
-            make.leading.trailing.equalToSuperview().inset(16)
-            make.height.equalTo(60)
+            make.top.equalTo(onlyCharView.snp.bottom).offset(Constants.Constraints.topConstraint)//(30)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)  //(16)
+            make.height.equalTo(Constants.Constraints.heightConstraint)//(60)
         }
         // passwordView
         contentView.addSubview(passwordView)
         passwordView.snp.makeConstraints{make in
-            make.top.equalTo(linkView.snp.bottom).offset(30)
-            make.leading.trailing.equalToSuperview().inset(16)
-            make.height.equalTo(60)
+            make.top.equalTo(linkView.snp.bottom).offset(Constants.Constraints.topConstraint)//(30)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)  //(16)
+            make.height.equalTo(Constants.Constraints.heightConstraint)//(60)
         }
     }
     
@@ -127,6 +127,15 @@ extension MainViewController {
         }
         enum LabelsTexts {
             static let mainTitleLabeText = "Text Fields"
+        }
+        enum Constraints {
+            static let titleTopToSuperViewConstraint = 92
+            static let noDigitsViewConstraint = 163
+            static let topConstraint = 30
+            static let leadingConstraint = 16
+            static let trailingConstraint = 16
+            static let titleLabelHeightConstraint = 41
+            static let heightConstraint = 60
         }
     }
 }

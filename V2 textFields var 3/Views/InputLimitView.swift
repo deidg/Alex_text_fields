@@ -125,7 +125,6 @@ extension  InputLimitView: UITextFieldDelegate  {
             static let textFieldFont = UIFont(name: "Rubik", size: 17)
             static let textFieldTextColor = UIColor(red: 60/255, green: 60/255, blue: 67/255, alpha: 0.6)
             static let viewBackgroundColor = UIColor(red: 118/255, green: 118/255, blue: 128/255, alpha: 0.12)
-            
         }
     }
 }
