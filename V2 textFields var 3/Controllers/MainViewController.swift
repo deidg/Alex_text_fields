@@ -22,8 +22,18 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         setupItemsOnView()
         defaultConfiguration()
+        setupKeyboardHiding()
         linkView.delegate = self
     }
+    
+    private func setupKeyboardHiding() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    let textFieldFrame = view.convert(currentTextField.frame, from: currentTextField.superview)
+//    resetButton.addTarget(self, action: #selector(resetPasswordButtonTapped), for: .primaryActionTriggered)
+    
     
     //MARK: views
     private let scrollView = UIScrollView()
@@ -93,10 +103,15 @@ final class MainViewController: UIViewController {
         }
     }
     
+    
+    
+    
+    
+    
     private func defaultConfiguration() {
         self.view.backgroundColor = .white
         
-   
+        
     }
 }
 
@@ -110,7 +125,26 @@ extension MainViewController: LinkViewDelegate {
 //MARK: constants
 extension MainViewController {
     
-      
+    @objc func keyboardWillShow(sender: NSNotification) {
+        guard let userInfo = sender.userInfo,
+              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+              let currentTextField = UIResponder.currentFirst() as? UITextField else { return }
+        
+        let keyboardTopY = keyboardFrame.cgRectValue.origin.y
+        let convertedTextFieldFrame = view.convert(currentTextField.frame, from: currentTextField.superview)
+        let textFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
+        
+        if textFieldBottomY > keyboardTopY {
+            let textBoxY = convertedTextFieldFrame.origin.y
+            let newFrameY = (textBoxY - keyboardTopY / 2) * -1
+            view.frame.origin.y = newFrameY
+        }
+    }
+    
+    @objc func keyboardWillHide(notification: NSNotification) {  //@objc
+        view.frame.origin.y = 0
+    }
+    //    }
     
     
     
@@ -133,6 +167,7 @@ extension MainViewController {
         }
     }
 }
+//}
 extension MainViewController : UITextFieldDelegate {
     //MARK: textediting
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -143,8 +178,29 @@ extension MainViewController : UITextFieldDelegate {
     }
 }
 //MARK: keyboard
-    
+//extension MainViewController {
+//
+//    }
+//}
 
+extension UIResponder {
+    
+    private struct Static {
+        static weak var responder: UIResponder?
+    }
+    
+    /// Finds the current first responder
+    /// - Returns: the current UIResponder if it exists
+    static func currentFirst() -> UIResponder? {
+        Static.responder = nil
+        UIApplication.shared.sendAction(#selector(UIResponder._trap), to: nil, from: nil, for: nil)
+        return Static.responder
+    }
+    
+    @objc private func _trap() {
+        Static.responder = self
+    }
+}
 
 
 

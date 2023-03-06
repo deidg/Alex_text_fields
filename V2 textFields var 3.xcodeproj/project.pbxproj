@@ -22,6 +22,7 @@
 		FAA2EA6029B513CC00C561E9 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA5F29B513CC00C561E9 /* LinkView.swift */; };
 		FAA2EA6229B513F100C561E9 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA6129B513F100C561E9 /* PasswordView.swift */; };
 		FAA563D729B5BFFE000DF576 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA563D629B5BFFE000DF576 /* MainViewController.swift */; };
+		FAA563D929B64108000DF576 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA563D829B64108000DF576 /* UIResponder+Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		FAA2EA5F29B513CC00C561E9 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		FAA2EA6129B513F100C561E9 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		FAA563D629B5BFFE000DF576 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FAA563D829B64108000DF576 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
 		FC8932A49F0497A45181E083 /* libPods-V2 textFields var 3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-V2 textFields var 3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -204,6 +206,7 @@
 			children = (
 				FAA2EA2529B50F1F00C561E9 /* AppDelegate.swift */,
 				FAA2EA2729B50F1F00C561E9 /* SceneDelegate.swift */,
+				FAA563D829B64108000DF576 /* UIResponder+Utils.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA563D929B64108000DF576 /* UIResponder+Utils.swift in Sources */,
 				FAA2EA5A29B5136900C561E9 /* NoDigitsView.swift in Sources */,
 				FAA2EA5E29B513AF00C561E9 /* OnlyCharView.swift in Sources */,
 				FAA2EA6229B513F100C561E9 /* PasswordView.swift in Sources */,
