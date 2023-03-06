@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_V2_textFields_var_3_V2_textFields_var_3UITests : NSObject
+@end
+@implementation PodsDummy_Pods_V2_textFields_var_3_V2_textFields_var_3UITests
+@end
