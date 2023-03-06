@@ -10,6 +10,9 @@
 		479930969C15551A36AD84D6 /* libPods-V2 textFields var 3-V2 textFields var 3UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6291C734A1D99664E203CECE /* libPods-V2 textFields var 3-V2 textFields var 3UITests.a */; };
 		597254D27A476F1C2B61DB0E /* libPods-V2 textFields var 3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8932A49F0497A45181E083 /* libPods-V2 textFields var 3.a */; };
 		EB10F22E8B310F71F2294DAC /* libPods-V2 textFields var 3Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65D2F36E7405571E75115E61 /* libPods-V2 textFields var 3Tests.a */; };
+		FA96952C29B658E5001F362B /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA96952929B658E5001F362B /* Rubik-SemiBold.ttf */; };
+		FA96952D29B658E5001F362B /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA96952A29B658E5001F362B /* Rubik-Medium.ttf */; };
+		FA96952E29B658E5001F362B /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA96952B29B658E5001F362B /* Rubik-Regular.ttf */; };
 		FAA2EA2629B50F1F00C561E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA2529B50F1F00C561E9 /* AppDelegate.swift */; };
 		FAA2EA2829B50F1F00C561E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA2729B50F1F00C561E9 /* SceneDelegate.swift */; };
 		FAA2EA2F29B50F2300C561E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2EA2E29B50F2300C561E9 /* Assets.xcassets */; };
@@ -51,6 +54,9 @@
 		679DAA364AE21AB084134400 /* Pods-V2 textFields var 3-V2 textFields var 3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-V2 textFields var 3-V2 textFields var 3UITests.release.xcconfig"; path = "Target Support Files/Pods-V2 textFields var 3-V2 textFields var 3UITests/Pods-V2 textFields var 3-V2 textFields var 3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		A872FB1BE7E07AA4F7FA766C /* Pods-V2 textFields var 3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-V2 textFields var 3Tests.release.xcconfig"; path = "Target Support Files/Pods-V2 textFields var 3Tests/Pods-V2 textFields var 3Tests.release.xcconfig"; sourceTree = "<group>"; };
 		F29F111057365C62E1A79249 /* Pods-V2 textFields var 3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-V2 textFields var 3Tests.debug.xcconfig"; path = "Target Support Files/Pods-V2 textFields var 3Tests/Pods-V2 textFields var 3Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA96952929B658E5001F362B /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		FA96952A29B658E5001F362B /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		FA96952B29B658E5001F362B /* Rubik-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		FAA2EA2229B50F1F00C561E9 /* V2 textFields var 3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "V2 textFields var 3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA2EA2529B50F1F00C561E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA2EA2729B50F1F00C561E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +128,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA96952829B658BF001F362B /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FA96952A29B658E5001F362B /* Rubik-Medium.ttf */,
+				FA96952B29B658E5001F362B /* Rubik-Regular.ttf */,
+				FA96952929B658E5001F362B /* Rubik-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		FAA2EA1929B50F1E00C561E9 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +168,7 @@
 				FAA2EA5629B512DD00C561E9 /* Controllers */,
 				FAA2EA5729B512F400C561E9 /* Assets */,
 				FAA2EA3329B50F2300C561E9 /* Info.plist */,
+				FA96952829B658BF001F362B /* Fonts */,
 			);
 			path = "V2 textFields var 3";
 			sourceTree = "<group>";
@@ -318,7 +335,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA96952D29B658E5001F362B /* Rubik-Medium.ttf in Resources */,
+				FA96952E29B658E5001F362B /* Rubik-Regular.ttf in Resources */,
 				FAA2EA2F29B50F2300C561E9 /* Assets.xcassets in Resources */,
+				FA96952C29B658E5001F362B /* Rubik-SemiBold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
