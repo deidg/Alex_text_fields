@@ -11,7 +11,7 @@ import SnapKit
 
 class CounterView: UIView {
     //MARK: UI Elements
-    let inputLimitLabel: UILabel = {
+    private let inputLimitLabel: UILabel = {
         let inputLimitLabel = UILabel()
         inputLimitLabel.text = Constants.LabelsTexts.inputLimitLabelText
         inputLimitLabel.backgroundColor = .white
@@ -19,7 +19,7 @@ class CounterView: UIView {
         inputLimitLabel.font = Constants.LabelsFonts.smallLabelFont
         return inputLimitLabel
     }()
-    var charactersCounter: UILabel = {
+    private var charactersCounter: UILabel = {
         let charactersCounter = UILabel()
         charactersCounter.backgroundColor = .white
         charactersCounter.textAlignment = .right
@@ -28,14 +28,14 @@ class CounterView: UIView {
         charactersCounter.text = Constants.LabelsTexts.charactersCounterText
         return charactersCounter
     }()
-    let limitTextView: UIView = {
+    private let limitTextView: UIView = {
         let limitTextView = UIView()
         limitTextView.backgroundColor = .yellow
         limitTextView.backgroundColor = Constants.TextFields.viewBackgroundColor
         limitTextView.layer.cornerRadius = Constants.LabelsSettings.lettersTextViewCornerRadius
         return limitTextView
     }()
-    let limitTextField: UITextField = {
+    private let limitTextField: UITextField = {
         let limitTextField = UITextField()
         limitTextField.placeholder = Constants.TextFields.lettersTextFieldPlaceholderText
         limitTextField.textColor = Constants.TextFields.textFieldTextColor

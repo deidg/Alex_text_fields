@@ -21,7 +21,7 @@ class LinkView: UIView {
     let linkRegex: String = "((?:http|https)://)?(?:www\\.)?(?:Www\\.)?(?:WWW\\.)?[\\w\\d\\-_]+\\.\\w{2,3}(\\.\\w{2})?(/(?<=/)(?:[\\w\\d\\-./_]+)?)?"
     
     //MARK: UI Elements
-    let linkLabel: UILabel = {
+    private let linkLabel: UILabel = {
         let linkLabel = UILabel()
         linkLabel.text = Constants.LabelsTexts.linkLabelText
         linkLabel.backgroundColor = .white
@@ -29,13 +29,13 @@ class LinkView: UIView {
         linkLabel.font = Constants.LabelsFonts.smallLabelFont
         return linkLabel
     }()
-    let linkTextView: UIView = {
+    private let linkTextView: UIView = {
         let linkTextView = UIView()
         linkTextView.backgroundColor = Constants.TextFields.textFieldBackgroundColor
         linkTextView.layer.cornerRadius = Constants.LabelsSettings.lettersTextViewCornerRadius
         return linkTextView
     }()
-    let linkTextField: UITextField = {
+    private let linkTextField: UITextField = {
         let linkTextField = UITextField()
         linkTextField.placeholder = Constants.TextFields.linkTextFieldPlaceholderText
         linkTextField.textColor = Constants.TextFields.textFieldTextColor

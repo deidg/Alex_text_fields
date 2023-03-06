@@ -12,7 +12,7 @@ import SnapKit
 class NoDigitsView: UIView {
     
     //MARK: UI Elements
-    let noDigitLabel: UILabel = {
+    private let noDigitLabel: UILabel = {
         let noDigitLabel = UILabel()
         noDigitLabel.text = Constants.LabelsTexts.noDigitLabelText
         noDigitLabel.backgroundColor = Constants.LabelsBackgroundColors.labelBackgoundColors
@@ -20,13 +20,13 @@ class NoDigitsView: UIView {
         noDigitLabel.font = Constants.LabelsFonts.smallLabelFont
         return noDigitLabel
     }()
-    let lettersTextView: UIView = {
+    private let lettersTextView: UIView = {
         let lettersTextView = UIView()
         lettersTextView.backgroundColor = Constants.TextFields.viewBackgroundColor
         lettersTextView.layer.cornerRadius = Constants.LabelsSettings.lettersTextViewCornerRadius
         return lettersTextView
     }()
-    let lettersTextField: UITextField = {
+    private let lettersTextField: UITextField = {
         let lettersTextField = UITextField()
         lettersTextField.placeholder = Constants.TextFields.lettersTextFieldPlaceholderText
         lettersTextField.textColor = Constants.TextFields.textFieldTextColor

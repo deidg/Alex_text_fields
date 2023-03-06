@@ -12,7 +12,7 @@ import JMMaskTextField_Swift
 
 class MaskView: UIView {
     //MARK: UI Elements
-    let onlyCharectersLabel: UILabel = {
+    private let onlyCharectersLabel: UILabel = {
         let onlyCharectersLabel = UILabel()
         onlyCharectersLabel.text = Constants.LabelsTexts.onlyCharectersLabelText
         onlyCharectersLabel.backgroundColor = .white
@@ -20,13 +20,13 @@ class MaskView: UIView {
         onlyCharectersLabel.font = Constants.LabelsFonts.smallLabelFont
         return onlyCharectersLabel
     }()
-    let characterTextView: UIView = {
+    private let characterTextView: UIView = {
         let characterTextView = UIView()
         characterTextView.backgroundColor = Constants.TextFields.textFieldBackgroundColor
         characterTextView.layer.cornerRadius = Constants.LabelsSettings.lettersTextViewCornerRadius
         return characterTextView
     }()
-    let characterTextField: JMMaskTextField = {
+    private let characterTextField: JMMaskTextField = {
         let characterTextField = JMMaskTextField(frame:CGRect.zero)
         characterTextField.maskString = "AAAAA-00000"
         characterTextField.placeholder = "wwwww-ddddd"

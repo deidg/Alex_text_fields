@@ -11,7 +11,7 @@ import SafariServices
 
 class PasswordView: UIView {
     //MARK: UI Elements
-    let validationLabel: UILabel = {
+    private let validationLabel: UILabel = {
         let validationLabel = UILabel()
         validationLabel.text = Constants.LabelsTexts.validationLabelText
         validationLabel.backgroundColor = .white
@@ -19,45 +19,45 @@ class PasswordView: UIView {
         validationLabel.font = Constants.LabelsFonts.smallLabelFont
         return validationLabel
     }()
-    let passwordTextView: UIView = {
+    private let passwordTextView: UIView = {
         let passwordTextView = UIView()
         passwordTextView.backgroundColor = Constants.TextFields.textFieldBackgroundColor
         passwordTextView.layer.cornerRadius = Constants.LabelsSettings.lettersTextViewCornerRadius
         return passwordTextView
     }()
-    let passwordTextField: UITextField = {
+    private let passwordTextField: UITextField = {
         let passwordTextField = UITextField()
         passwordTextField.placeholder = Constants.TextFields.passwordTextFieldPlaceholderText
         passwordTextField.textColor = Constants.TextFields.textFieldTextColor
         passwordTextField.font = Constants.TextFields.textFieldFont
         return passwordTextField
     }()
-    let validationRulesView: UIView = {
+    private let validationRulesView: UIView = {
         let validationRulesView = UIView()
         return validationRulesView
     }()
-    let validationMinLengthLabel: UILabel = {
+    private let validationMinLengthLabel: UILabel = {
         let validationMinLengthLabel = UILabel()
         validationMinLengthLabel.text = Constants.LabelsTexts.validationMinLengthLabelText
         validationMinLengthLabel.textColor = Constants.LabelsTexts.smallLabelTextColor
         validationMinLengthLabel.font = Constants.LabelsFonts.smallLabelFont
         return validationMinLengthLabel
     }()
-    let validationDigitLabel: UILabel = {
+    private let validationDigitLabel: UILabel = {
         let validationDigitLabel = UILabel()
         validationDigitLabel.text = Constants.LabelsTexts.validationDigitLabelText
         validationDigitLabel.textColor = Constants.LabelsTexts.smallLabelTextColor
         validationDigitLabel.font = Constants.LabelsFonts.smallLabelFont
         return validationDigitLabel
     }()
-    let validationLowerCaseLabel: UILabel = {
+    private let validationLowerCaseLabel: UILabel = {
         let validationLowerCaseLabel = UILabel()
         validationLowerCaseLabel.text = Constants.LabelsTexts.validationLowerCaseLabelText
         validationLowerCaseLabel.textColor = Constants.LabelsTexts.smallLabelTextColor
         validationLowerCaseLabel.font = Constants.LabelsFonts.smallLabelFont
         return validationLowerCaseLabel
     }()
-    let validationCapitalCaseLabel: UILabel = {
+    private let validationCapitalCaseLabel: UILabel = {
         let validationCapitalCaseLabel = UILabel()
         validationCapitalCaseLabel.text = Constants.LabelsTexts.validationCapitalCaseLabelText
         validationCapitalCaseLabel.textColor = Constants.LabelsTexts.smallLabelTextColor
