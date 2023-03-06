@@ -102,7 +102,9 @@ extension  CounterView: UITextFieldDelegate  {
         }
         return lengthToAdd <= 10
     }
+}
     
+    extension  CounterView {
     enum Constants {
         enum LabelsSettings {
             static let lettersTextViewCornerRadius: CGFloat = 10

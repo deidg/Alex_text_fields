@@ -74,7 +74,8 @@ extension  MaskView: UITextFieldDelegate  {
         let charSet = CharacterSet(charactersIn: string)
         return allowedCharacters.isSuperset(of: charSet)
     }
-    
+}
+extension  MaskView {
     enum Constants {
         enum LabelsSettings {
             static let lettersTextViewCornerRadius: CGFloat = 10

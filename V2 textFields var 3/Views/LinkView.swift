@@ -120,7 +120,9 @@ extension  LinkView: UITextFieldDelegate  {
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         controller.dismiss(animated: true, completion: nil)
     }
+}
     
+    extension  LinkView{
     enum Constants {
         enum LabelsSettings {
             static let lettersTextViewCornerRadius: CGFloat = 10

@@ -138,7 +138,7 @@ class PasswordView: UIView {
     }
 }
 
-extension  PasswordView: UITextFieldDelegate  {
+extension PasswordView: UITextFieldDelegate  {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let text = passwordTextField.text,
            let textRange = Range(range, in: text) {
@@ -175,7 +175,9 @@ extension  PasswordView: UITextFieldDelegate  {
         }
         return true
     }
+}
     
+    extension  PasswordView {
     enum Constants {
         enum LabelsSettings {
             static let lettersTextViewCornerRadius: CGFloat = 10

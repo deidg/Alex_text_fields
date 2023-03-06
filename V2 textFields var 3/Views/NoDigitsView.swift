@@ -81,8 +81,10 @@ extension  NoDigitsView: UITextFieldDelegate  {
         let charSet = CharacterSet(charactersIn: string)
         return allowedCharacters.isSuperset(of: charSet)
     }
-    
-    //MARK: constants
+}
+
+//MARK: constants
+extension  NoDigitsView {
     enum Constants {
         enum LabelsSettings {
             static let lettersTextViewCornerRadius: CGFloat = 10
@@ -106,11 +108,4 @@ extension  NoDigitsView: UITextFieldDelegate  {
     }
 }
 
-extension String {
-    var containsValidCharacter: Bool {
-        guard self != "" else { return true }
-        let hexSet = CharacterSet(charactersIn: "1234567890")
-        let newSet = CharacterSet(charactersIn: self)
-        return hexSet.isSuperset(of: newSet)
-    }
-}
+
