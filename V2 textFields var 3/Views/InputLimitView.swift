@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class CounterView: UIView {
+class InputLimitView: UIView {
     //MARK: UI Elements
     private let inputLimitLabel: UILabel = {
         let inputLimitLabel = UILabel()
@@ -87,7 +87,7 @@ class CounterView: UIView {
 }
 
 //MARK: TextFieldDelegate
-extension  CounterView: UITextFieldDelegate  {
+extension  InputLimitView: UITextFieldDelegate  {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         let currentText = textField.text ?? ""
@@ -106,7 +106,7 @@ extension  CounterView: UITextFieldDelegate  {
 }
 
 //MARK: constants
-    extension  CounterView {
+    extension  InputLimitView {
     enum Constants {
         enum LabelsSettings {
             static let lettersTextViewCornerRadius: CGFloat = 10

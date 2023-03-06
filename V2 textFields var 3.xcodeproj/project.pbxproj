@@ -17,8 +17,8 @@
 		FAA2EA4729B50F2400C561E9 /* V2_textFields_var_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA4629B50F2400C561E9 /* V2_textFields_var_3UITests.swift */; };
 		FAA2EA4929B50F2400C561E9 /* V2_textFields_var_3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA4829B50F2400C561E9 /* V2_textFields_var_3UITestsLaunchTests.swift */; };
 		FAA2EA5A29B5136900C561E9 /* NoDigitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA5929B5136900C561E9 /* NoDigitsView.swift */; };
-		FAA2EA5C29B5138B00C561E9 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA5B29B5138B00C561E9 /* CounterView.swift */; };
-		FAA2EA5E29B513AF00C561E9 /* MaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA5D29B513AF00C561E9 /* MaskView.swift */; };
+		FAA2EA5C29B5138B00C561E9 /* InputLimitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA5B29B5138B00C561E9 /* InputLimitView.swift */; };
+		FAA2EA5E29B513AF00C561E9 /* OnlyCharView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA5D29B513AF00C561E9 /* OnlyCharView.swift */; };
 		FAA2EA6029B513CC00C561E9 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA5F29B513CC00C561E9 /* LinkView.swift */; };
 		FAA2EA6229B513F100C561E9 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA6129B513F100C561E9 /* PasswordView.swift */; };
 		FAA563D729B5BFFE000DF576 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA563D629B5BFFE000DF576 /* MainViewController.swift */; };
@@ -61,8 +61,8 @@
 		FAA2EA4629B50F2400C561E9 /* V2_textFields_var_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2_textFields_var_3UITests.swift; sourceTree = "<group>"; };
 		FAA2EA4829B50F2400C561E9 /* V2_textFields_var_3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2_textFields_var_3UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FAA2EA5929B5136900C561E9 /* NoDigitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDigitsView.swift; sourceTree = "<group>"; };
-		FAA2EA5B29B5138B00C561E9 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
-		FAA2EA5D29B513AF00C561E9 /* MaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskView.swift; sourceTree = "<group>"; };
+		FAA2EA5B29B5138B00C561E9 /* InputLimitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLimitView.swift; sourceTree = "<group>"; };
+		FAA2EA5D29B513AF00C561E9 /* OnlyCharView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCharView.swift; sourceTree = "<group>"; };
 		FAA2EA5F29B513CC00C561E9 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		FAA2EA6129B513F100C561E9 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		FAA563D629B5BFFE000DF576 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -191,8 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				FAA2EA5929B5136900C561E9 /* NoDigitsView.swift */,
-				FAA2EA5B29B5138B00C561E9 /* CounterView.swift */,
-				FAA2EA5D29B513AF00C561E9 /* MaskView.swift */,
+				FAA2EA5B29B5138B00C561E9 /* InputLimitView.swift */,
+				FAA2EA5D29B513AF00C561E9 /* OnlyCharView.swift */,
 				FAA2EA5F29B513CC00C561E9 /* LinkView.swift */,
 				FAA2EA6129B513F100C561E9 /* PasswordView.swift */,
 			);
@@ -410,13 +410,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA2EA5A29B5136900C561E9 /* NoDigitsView.swift in Sources */,
-				FAA2EA5E29B513AF00C561E9 /* MaskView.swift in Sources */,
+				FAA2EA5E29B513AF00C561E9 /* OnlyCharView.swift in Sources */,
 				FAA2EA6229B513F100C561E9 /* PasswordView.swift in Sources */,
 				FAA2EA2629B50F1F00C561E9 /* AppDelegate.swift in Sources */,
 				FAA2EA2829B50F1F00C561E9 /* SceneDelegate.swift in Sources */,
 				FAA563D729B5BFFE000DF576 /* MainViewController.swift in Sources */,
 				FAA2EA6029B513CC00C561E9 /* LinkView.swift in Sources */,
-				FAA2EA5C29B5138B00C561E9 /* CounterView.swift in Sources */,
+				FAA2EA5C29B5138B00C561E9 /* InputLimitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

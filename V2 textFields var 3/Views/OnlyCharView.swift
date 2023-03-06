@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import JMMaskTextField_Swift
 
-class MaskView: UIView {
+class OnlyCharView: UIView {
     //MARK: UI Elements
     private let onlyCharectersLabel: UILabel = {
         let onlyCharectersLabel = UILabel()
@@ -69,7 +69,7 @@ class MaskView: UIView {
 }
 
 //MARK: TextFieldDelegate
-extension  MaskView: UITextFieldDelegate  {
+extension  OnlyCharView: UITextFieldDelegate  {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let allowedCharacters = CharacterSet.decimalDigits.inverted
         let charSet = CharacterSet(charactersIn: string)
@@ -77,7 +77,7 @@ extension  MaskView: UITextFieldDelegate  {
     }
 }
 //MARK: constants
-extension  MaskView {
+extension  OnlyCharView {
     enum Constants {
         enum LabelsSettings {
             static let lettersTextViewCornerRadius: CGFloat = 10

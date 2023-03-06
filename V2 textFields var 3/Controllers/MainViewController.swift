@@ -13,8 +13,8 @@ import JMMaskTextField_Swift
 final class MainViewController: UIViewController {
     
     let noDigitsView = NoDigitsView()
-    let counterView = CounterView()
-    let maskView = MaskView()
+    let inputLimitView = InputLimitView()
+    let onlyCharView = OnlyCharView()
     let linkView = LinkView()
     let passwordView = PasswordView()
     var activeTextField : UITextField? = nil
@@ -38,6 +38,7 @@ final class MainViewController: UIViewController {
         titleLabel.backgroundColor = .white
         return titleLabel
     }()
+    //MARK: Items On View
     private func setupItemsOnView() {
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints{ make in
@@ -49,42 +50,42 @@ final class MainViewController: UIViewController {
         contentView.snp.makeConstraints { make in
             make.top.width.height.equalTo(scrollView)
         }
-        //  Textlabel
+        // titleLabel
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints{ make in
             make.top.equalToSuperview().offset(92)
             make.trailing.leading.equalToSuperview().inset(16)
             make.height.equalTo(41)
         }
-        // 1 field 1
+        // noDigitsView
         contentView.addSubview(noDigitsView)
         noDigitsView.snp.makeConstraints{make in
             make.top.equalToSuperview().offset(163)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(60)
         }
-        // 2 field 2
-        contentView.addSubview(counterView)
-        counterView.snp.makeConstraints{make in
+        // inputLimitView
+        contentView.addSubview(inputLimitView)
+        inputLimitView.snp.makeConstraints{make in
             make.top.equalTo(noDigitsView.snp.bottom).offset(30)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(60)
         }
-        // 3 field 3
-        contentView.addSubview(maskView)
-        maskView.snp.makeConstraints{make in
-            make.top.equalTo(counterView.snp.bottom).offset(30)
+        // onlyCharView
+        contentView.addSubview(onlyCharView)
+        onlyCharView.snp.makeConstraints{make in
+            make.top.equalTo(inputLimitView.snp.bottom).offset(30)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(60)
         }
-        // 4 field 4 LINK
+        // linkView
         contentView.addSubview(linkView)
         linkView.snp.makeConstraints{make in
-            make.top.equalTo(maskView.snp.bottom).offset(30)
+            make.top.equalTo(onlyCharView.snp.bottom).offset(30)
             make.leading.trailing.equalToSuperview().inset(16)
             make.height.equalTo(60)
         }
-        // 5 field 5  PASSWORDS
+        // passwordView
         contentView.addSubview(passwordView)
         passwordView.snp.makeConstraints{make in
             make.top.equalTo(linkView.snp.bottom).offset(30)
