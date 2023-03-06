@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import SafariServices
 
-class PasswordView: UIView {
+final class PasswordView: UIView {
     //MARK: UI Elements
     private let validationLabel: UILabel = {
         let validationLabel = UILabel()
@@ -131,7 +131,6 @@ class PasswordView: UIView {
             make.height.equalTo(15)
         }
     }
-    
     private func defaultConfiguration() {
         backgroundColor = .white
         passwordTextField.delegate = self

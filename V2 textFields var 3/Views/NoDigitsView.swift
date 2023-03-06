@@ -9,32 +9,32 @@
 import UIKit
 import SnapKit
 
-class NoDigitsView: UIView {
+final class NoDigitsView: UIView {
     
     //MARK: UI Elements
     private let noDigitLabel: UILabel = {
-        let noDigitLabel = UILabel()
-        noDigitLabel.text = Constants.LabelsTexts.noDigitLabelText
-        noDigitLabel.backgroundColor = Constants.LabelsBackgroundColors.labelBackgoundColors
-        noDigitLabel.textColor = Constants.LabelsTexts.smallLabelTextColor
-        noDigitLabel.font = Constants.LabelsFonts.smallLabelFont
-        return noDigitLabel
+        let noDigitsLabel = UILabel()
+        noDigitsLabel.text = Constants.LabelsTexts.noDigitLabelText
+        noDigitsLabel.backgroundColor = Constants.LabelsBackgroundColors.labelBackgoundColors
+        noDigitsLabel.textColor = Constants.LabelsTexts.smallLabelTextColor
+        noDigitsLabel.font = Constants.LabelsFonts.smallLabelFont
+        return noDigitsLabel
     }()
-    private let lettersTextView: UIView = {
-        let lettersTextView = UIView()
-        lettersTextView.backgroundColor = Constants.TextFields.viewBackgroundColor
-        lettersTextView.layer.cornerRadius = Constants.LabelsSettings.lettersTextViewCornerRadius
-        return lettersTextView
+    private let noDigitsView: UIView = {
+        let noDigitsView = UIView()
+        noDigitsView.backgroundColor = Constants.TextFields.viewBackgroundColor
+        noDigitsView.layer.cornerRadius = Constants.LabelsSettings.lettersTextViewCornerRadius
+        return noDigitsView
     }()
-    private let lettersTextField: UITextField = {
-        let lettersTextField = UITextField()
-        lettersTextField.placeholder = Constants.TextFields.lettersTextFieldPlaceholderText
-        lettersTextField.textColor = Constants.TextFields.textFieldTextColor
-        lettersTextField.font = Constants.TextFields.textFieldFont
-        lettersTextField.isEnabled = true
-        lettersTextField.keyboardType = .alphabet
-        lettersTextField.becomeFirstResponder()
-        return lettersTextField
+    private let noDigitsTextField: UITextField = {
+        let noDigitsTextField = UITextField()
+        noDigitsTextField.placeholder = Constants.TextFields.lettersTextFieldPlaceholderText
+        noDigitsTextField.textColor = Constants.TextFields.textFieldTextColor
+        noDigitsTextField.font = Constants.TextFields.textFieldFont
+        noDigitsTextField.isEnabled = true
+        noDigitsTextField.keyboardType = .alphabet
+        noDigitsTextField.becomeFirstResponder()
+        return noDigitsTextField
     }()
     
     //MARK: Initialization
@@ -55,15 +55,15 @@ class NoDigitsView: UIView {
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(20)
         }
-        addSubview(lettersTextView)
-        lettersTextView.snp.makeConstraints { make in
+        addSubview(noDigitsView)
+        noDigitsView.snp.makeConstraints { make in
             make.top.equalTo(noDigitLabel.snp.bottom).offset(4)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(36)
         }
-        addSubview(lettersTextField)
-        lettersTextField.snp.makeConstraints { make in
-            make.top.equalTo(lettersTextView.snp.top).offset(7)
+        addSubview(noDigitsTextField)
+        noDigitsTextField.snp.makeConstraints { make in
+            make.top.equalTo(noDigitsView.snp.top).offset(7)
             make.leading.trailing.equalToSuperview().inset(8)
             make.height.equalTo(22)
         }
@@ -71,7 +71,7 @@ class NoDigitsView: UIView {
     
     private func defaultConfiguration() {
         backgroundColor = .white
-        lettersTextField.delegate = self
+        noDigitsTextField.delegate = self
     }
 }
 
@@ -94,7 +94,7 @@ extension  NoDigitsView {
             static let smallLabelFont = UIFont(name: "Rubik", size: 13)
         }
         enum LabelsTexts {
-            static let noDigitLabelText = "NO digit field"
+            static let noDigitLabelText = "NO digits field"
             static let smallLabelTextColor = UIColor(red: 45/255, green: 45/255, blue: 45/255, alpha: 1)
         }
         enum LabelsBackgroundColors {

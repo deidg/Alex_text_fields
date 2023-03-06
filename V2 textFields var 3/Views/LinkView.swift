@@ -15,7 +15,7 @@ protocol LinkViewDelegate: AnyObject {
 //    func safariViewControllerDidFinish(_ controller: SFSafariViewController)
 }
 
-class LinkView: UIView {
+final class LinkView: UIView {
     weak var delegate: LinkViewDelegate?
     
     let linkRegex: String = "((?:http|https)://)?(?:www\\.)?(?:Www\\.)?(?:WWW\\.)?[\\w\\d\\-_]+\\.\\w{2,3}(\\.\\w{2})?(/(?<=/)(?:[\\w\\d\\-./_]+)?)?"

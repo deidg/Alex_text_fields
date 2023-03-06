@@ -94,7 +94,7 @@ final class MainViewController: UIViewController {
         }
     }
     
-    func defaultConfiguration() {
+    private func defaultConfiguration() {
         self.view.backgroundColor = .white
         
         //стереть гестурз при финальной чистке
@@ -104,7 +104,7 @@ final class MainViewController: UIViewController {
         //        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     //норм. оставить тут
-    func gesturesRecognitions() {
+    private func gesturesRecognitions() {
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainViewController.backgroundTap))
         self.view.addGestureRecognizer(tapGestureRecognizer)
         NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)

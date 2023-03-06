@@ -10,27 +10,27 @@ import UIKit
 import SnapKit
 import JMMaskTextField_Swift
 
-class OnlyCharView: UIView {
+final class OnlyCharView: UIView {
     //MARK: UI Elements
-    private let onlyCharectersLabel: UILabel = {
-        let onlyCharectersLabel = UILabel()
-        onlyCharectersLabel.text = Constants.LabelsTexts.onlyCharectersLabelText
-        onlyCharectersLabel.backgroundColor = .white
-        onlyCharectersLabel.textColor = Constants.LabelsTexts.smallLabelTextColor
-        onlyCharectersLabel.font = Constants.LabelsFonts.smallLabelFont
-        return onlyCharectersLabel
+    private let onlyCharLabel: UILabel = {
+        let onlyCharLabel = UILabel()
+        onlyCharLabel.text = Constants.LabelsTexts.onlyCharectersLabelText
+        onlyCharLabel.backgroundColor = .white
+        onlyCharLabel.textColor = Constants.LabelsTexts.smallLabelTextColor
+        onlyCharLabel.font = Constants.LabelsFonts.smallLabelFont
+        return onlyCharLabel
     }()
-    private let characterTextView: UIView = {
-        let characterTextView = UIView()
-        characterTextView.backgroundColor = Constants.TextFields.textFieldBackgroundColor
-        characterTextView.layer.cornerRadius = Constants.LabelsSettings.lettersTextViewCornerRadius
-        return characterTextView
+    private let onlyCharTextView: UIView = {
+        let onlyCharTextView = UIView()
+        onlyCharTextView.backgroundColor = Constants.TextFields.textFieldBackgroundColor
+        onlyCharTextView.layer.cornerRadius = Constants.LabelsSettings.lettersTextViewCornerRadius
+        return onlyCharTextView
     }()
-    private let characterTextField: JMMaskTextField = {
-        let characterTextField = JMMaskTextField(frame:CGRect.zero)
-        characterTextField.maskString = "AAAAA-00000"
-        characterTextField.placeholder = "wwwww-ddddd"
-        return characterTextField
+    private let onlyCharTextField: JMMaskTextField = {
+        let onlyCharTextField = JMMaskTextField(frame:CGRect.zero)
+        onlyCharTextField.maskString = Constants.onlyCharTFSetup.onlyCharTFMaskString
+        onlyCharTextField.placeholder = Constants.onlyCharTFSetup.onlyCharTFPlaceHolder
+        return onlyCharTextField
     }()
     
     //MARK: Initialization
@@ -44,21 +44,21 @@ class OnlyCharView: UIView {
     }
     //MARK: Methods
     private func setupUI() {
-        addSubview(onlyCharectersLabel)
-        onlyCharectersLabel.snp.makeConstraints { make in
+        addSubview(onlyCharLabel)
+        onlyCharLabel.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(20)
         }
-        addSubview(characterTextView)
-        characterTextView.snp.makeConstraints { make in
-            make.top.equalTo(onlyCharectersLabel.snp.bottom).offset(4)
+        addSubview(onlyCharTextView)
+        onlyCharTextView.snp.makeConstraints { make in
+            make.top.equalTo(onlyCharLabel.snp.bottom).offset(4)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(36)
         }
-        addSubview(characterTextField)
-        characterTextField.snp.makeConstraints { make in
-            make.top.equalTo(characterTextView.snp.top).offset(7)
+        addSubview(onlyCharTextField)
+        onlyCharTextField.snp.makeConstraints { make in
+            make.top.equalTo(onlyCharTextView.snp.top).offset(7)
             make.leading.trailing.equalToSuperview().inset(8)
             make.height.equalTo(22)
         }
@@ -85,7 +85,11 @@ extension  OnlyCharView {
         enum LabelsFonts {
             static let smallLabelFont = UIFont(name: "Rubik", size: 13)
         }
-        
+        enum onlyCharTFSetup {
+            static let onlyCharTFMaskString = "AAAAA-00000"
+            static let onlyCharTFPlaceHolder = "wwwww-ddddd"
+            
+        }
         enum LabelsTexts {
             static let onlyCharectersLabelText = "Only characters"
             static let smallLabelTextColor = UIColor(red: 45/255, green: 45/255, blue: 45/255, alpha: 1)

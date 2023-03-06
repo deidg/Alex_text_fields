@@ -9,7 +9,7 @@
 import UIKit
 import SnapKit
 
-class InputLimitView: UIView {
+final class InputLimitView: UIView {
     //MARK: UI Elements
     private let inputLimitLabel: UILabel = {
         let inputLimitLabel = UILabel()
@@ -28,19 +28,19 @@ class InputLimitView: UIView {
         charactersCounter.text = Constants.LabelsTexts.charactersCounterText
         return charactersCounter
     }()
-    private let limitTextView: UIView = {
-        let limitTextView = UIView()
-        limitTextView.backgroundColor = .yellow
-        limitTextView.backgroundColor = Constants.TextFields.viewBackgroundColor
-        limitTextView.layer.cornerRadius = Constants.LabelsSettings.lettersTextViewCornerRadius
-        return limitTextView
+    private let inputLimitView: UIView = {
+        let inputLimitView = UIView()
+        inputLimitView.backgroundColor = .yellow
+        inputLimitView.backgroundColor = Constants.TextFields.viewBackgroundColor
+        inputLimitView.layer.cornerRadius = Constants.LabelsSettings.lettersTextViewCornerRadius
+        return inputLimitView
     }()
-    private let limitTextField: UITextField = {
-        let limitTextField = UITextField()
-        limitTextField.placeholder = Constants.TextFields.lettersTextFieldPlaceholderText
-        limitTextField.textColor = Constants.TextFields.textFieldTextColor
-        limitTextField.font = Constants.TextFields.textFieldFont
-        return limitTextField
+    private let inputLimitTextField: UITextField = {
+        let inputLimitTextField = UITextField()
+        inputLimitTextField.placeholder = Constants.TextFields.lettersTextFieldPlaceholderText
+        inputLimitTextField.textColor = Constants.TextFields.textFieldTextColor
+        inputLimitTextField.font = Constants.TextFields.textFieldFont
+        return inputLimitTextField
     }()
     
     //MARK: Initialization
@@ -66,15 +66,15 @@ class InputLimitView: UIView {
             make.trailing.equalToSuperview().inset(16)
             make.height.equalTo(22)
         }
-        addSubview(limitTextView)
-        limitTextView.snp.makeConstraints { make in
+        addSubview(inputLimitView)
+        inputLimitView.snp.makeConstraints { make in
             make.top.equalTo(inputLimitLabel.snp.bottom).offset(4)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(36)
         }
-        addSubview(limitTextField)
-        limitTextField.snp.makeConstraints { make in
-            make.top.equalTo(limitTextView.snp.top).offset(7)
+        addSubview(inputLimitTextField)
+        inputLimitTextField.snp.makeConstraints { make in
+            make.top.equalTo(inputLimitView.snp.top).offset(7)
             make.leading.trailing.equalToSuperview().inset(8)
             make.height.equalTo(22)
         }
@@ -82,7 +82,7 @@ class InputLimitView: UIView {
     
     private func defaultConfiguration() {
         backgroundColor = .white
-        limitTextField.delegate = self
+        inputLimitTextField.delegate = self
     }
 }
 
