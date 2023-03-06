@@ -90,7 +90,6 @@ final class MainViewController: UIViewController {
             make.height.equalTo(Constants.Constraints.heightConstraint)
         }
     }
-    
     private func defaultConfiguration() {
         self.view.backgroundColor = .white
         linkView.delegate = self
@@ -98,15 +97,7 @@ final class MainViewController: UIViewController {
 }
 
 //MARK: extension ViewController
-extension MainViewController: LinkViewDelegate {
-    func openURL(url: URL) {
-        UIApplication.shared.open(url)
-    }
-}
-
-
 extension MainViewController {
- 
     private func addTapToHideKeyboard() {
         let tap = UITapGestureRecognizer(
             target: self,
@@ -114,7 +105,6 @@ extension MainViewController {
         )
         contentView.addGestureRecognizer(tap)
     }
-    
     private func observeKeyboardNotificaton() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardWillShow(sender:)),
@@ -125,50 +115,50 @@ extension MainViewController {
                                                name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
     }
+    @objc private func keyboardWillShow(sender: NSNotification) {
+        guard let userInfo = sender.userInfo else { return }
+        guard var keyboardFrame = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue else { return }
+        print(keyboardFrame)
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        var contentInset: UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height
+        scrollView.contentInset = contentInset
         
-        @objc private func keyboardWillShow(sender: NSNotification) {
-            guard let userInfo = sender.userInfo else { return }
-            guard var keyboardFrame = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue else { return }
-            print(keyboardFrame)
-            keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-            var contentInset: UIEdgeInsets = self.scrollView.contentInset
-            contentInset.bottom = keyboardFrame.size.height
-            scrollView.contentInset = contentInset
-            
-        }
-        
-        @objc private func keyboardWillHide(sender: NSNotification) {
-            let contentInset: UIEdgeInsets = UIEdgeInsets.zero
-            scrollView.contentInset = contentInset
-        }
-        
-        @objc private func hideKeyboard(gesture: UITapGestureRecognizer) {
-            view.endEditing(true)
-        }
     }
-
+    @objc private func keyboardWillHide(sender: NSNotification) {
+        let contentInset: UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
+    @objc private func hideKeyboard(gesture: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
 //MARK: constants
-    enum Constants {
-        enum LabelsFonts {
-            static let mainLabelFont = UIFont(name: "Rubik-Medium", size: 34)
-        }
-        enum LabelsTexts {
-            static let mainTitleLabeText = "Text Fields"
-        }
-        enum Constraints {
-            static let titleTopToSuperViewConstraint = 92
-            static let noDigitsViewConstraint = 163
-            static let topConstraint = 30
-            static let leadingConstraint = 16
-            static let trailingConstraint = 16
-            static let titleLabelHeightConstraint = 41
-            static let heightConstraint = 60
-        }
+enum Constants {
+    enum LabelsFonts {
+        static let mainLabelFont = UIFont(name: "Rubik-Medium", size: 34)
     }
-//}
+    enum LabelsTexts {
+        static let mainTitleLabeText = "Text Fields"
+    }
+    enum Constraints {
+        static let titleTopToSuperViewConstraint = 92
+        static let noDigitsViewConstraint = 163
+        static let topConstraint = 30
+        static let leadingConstraint = 16
+        static let trailingConstraint = 16
+        static let titleLabelHeightConstraint = 41
+        static let heightConstraint = 60
+    }
+}
+}
+ // MARK: Delegate
+extension MainViewController: LinkViewDelegate {
+    func openURL(url: URL) {
+        UIApplication.shared.open(url)
+    }
+}
 
-//MARK: keyboard
-    
+
 
 
 

@@ -5,12 +5,10 @@
 //  Created by Alex on 05.03.2023.
 //
 
-
 import UIKit
 import SnapKit
 
 final class NoDigitsView: UIView {
-    
     //MARK: UI Elements
     private let noDigitLabel: UILabel = {
         let noDigitsLabel = UILabel()
@@ -36,14 +34,12 @@ final class NoDigitsView: UIView {
         noDigitsTextField.becomeFirstResponder()
         return noDigitsTextField
     }()
-    
     //MARK: Initialization
     init() {
         super.init(frame: .zero)
         setupUI()
         defaultConfiguration()
     }
-    
     required init?(coder: NSCoder) {
         return nil
     }
@@ -68,7 +64,6 @@ final class NoDigitsView: UIView {
             make.height.equalTo(Constants.Constraints.textfieldHeightConstraint)
         }
     }
-    
     private func defaultConfiguration() {
         backgroundColor = .white
         noDigitsTextField.delegate = self
@@ -83,7 +78,6 @@ extension  NoDigitsView: UITextFieldDelegate  {
         return allowedCharacters.isSuperset(of: charSet)
     }
 }
-
 //MARK: constants
 extension  NoDigitsView {
     enum Constants {
@@ -94,7 +88,6 @@ extension  NoDigitsView {
             static let labelHeightConstraint = 20
             static let viewHeightConstraint = 36
             static let textfieldHeightConstraint = 22
-
         }
         enum LabelsSettings {
             static let lettersTextViewCornerRadius: CGFloat = 10

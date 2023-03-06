@@ -11,14 +11,11 @@ import SafariServices
 
 protocol LinkViewDelegate: AnyObject {
     func openURL(url: URL)
-    
-    //    func safariViewControllerDidFinish(_ controller: SFSafariViewController)
 }
 
 final class LinkView: UIView {
     weak var delegate: LinkViewDelegate?
-    
-    let linkRegex: String = "((?:http|https)://)?(?:www\\.)?(?:Www\\.)?(?:WWW\\.)?[\\w\\d\\-_]+\\.\\w{2,3}(\\.\\w{2})?(/(?<=/)(?:[\\w\\d\\-./_]+)?)?"
+    private let linkRegex: String = "((?:http|https)://)?(?:www\\.)?(?:Www\\.)?(?:WWW\\.)?[\\w\\d\\-_]+\\.\\w{2,3}(\\.\\w{2})?(/(?<=/)(?:[\\w\\d\\-./_]+)?)?"
     
     //MARK: UI Elements
     private let linkLabel: UILabel = {
@@ -50,7 +47,6 @@ final class LinkView: UIView {
         setupUI()
         defaultConfiguration()
     }
-    
     required init?(coder: NSCoder) {
         return nil
     }
@@ -75,7 +71,6 @@ final class LinkView: UIView {
             make.height.equalTo(Constants.Constraints.textfieldHeightConstraint)
         }
     }
-    
     private func defaultConfiguration() {
         backgroundColor = .white
         linkTextField.delegate = self
@@ -95,7 +90,6 @@ extension  LinkView: UITextFieldDelegate  {
                 print("its valid LINK")
                 let delay : Double = 2.0 // 5.0
                 DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                    
                     func startBrowser(_ sender: Any) {
                         if let urlString = self.linkTextField.text {
                             let url: URL?
@@ -117,7 +111,6 @@ extension  LinkView: UITextFieldDelegate  {
         }
         return true
     }
-    
     func safariViewControllerDidFinish(_ controller: SFSafariViewController) {
         controller.dismiss(animated: true, completion: nil)
     }

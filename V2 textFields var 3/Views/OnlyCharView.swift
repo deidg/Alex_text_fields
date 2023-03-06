@@ -102,7 +102,6 @@ extension  OnlyCharView {
             static let onlyCharectersLabelText = "Only characters"
             static let smallLabelTextColor = UIColor(red: 45/255, green: 45/255, blue: 45/255, alpha: 1)
         }
-        
         enum TextFields {
             static let textFieldBackgroundColor = UIColor(red: 118/255, green: 118/255, blue: 128/255, alpha: 0.12)
         }

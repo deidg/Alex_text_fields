@@ -71,7 +71,6 @@ final class PasswordView: UIView {
         setupUI()
         defaultConfiguration()
     }
-    
     required init?(coder: NSCoder) {
         return nil
     }
@@ -101,7 +100,6 @@ final class PasswordView: UIView {
             make.leading.trailing.equalToSuperview().inset(Constants.Constraints.rulesViewLeading)
             make.height.equalTo(Constants.Constraints.rulesViewHeight)
         }
-        
         validationRulesView.addSubview(validationMinLengthLabel)
         validationMinLengthLabel.snp.makeConstraints{ make in
             make.top.equalTo(validationRulesView.snp.top).offset(Constants.Constraints.leadingConstraint)
@@ -149,7 +147,6 @@ extension PasswordView: UITextFieldDelegate  {
             } else {
                 validationDigitLabel.textColor = .black
             }
-            
             let lowercaseLetters = CharacterSet.lowercaseLetters
             let lowercaseLettersRange = updatedText.rangeOfCharacter(from: lowercaseLetters)
             if lowercaseLettersRange != nil {
@@ -157,7 +154,6 @@ extension PasswordView: UITextFieldDelegate  {
             } else {
                 validationLowerCaseLabel.textColor = .black
             }
-            
             let capitalizedLetters = CharacterSet.uppercaseLetters
             let capitalizedLettersRange = updatedText.rangeOfCharacter(from: capitalizedLetters)
             if capitalizedLettersRange != nil {
@@ -165,7 +161,6 @@ extension PasswordView: UITextFieldDelegate  {
             } else {
                 validationCapitalCaseLabel.textColor = .black
             }
-            
             if updatedText.count >= 8 {
                 validationMinLengthLabel.textColor = .green
             } else {
@@ -197,7 +192,6 @@ extension PasswordView: UITextFieldDelegate  {
             static let mainLabelFont = UIFont(name: "Rubik-Medium", size: 34)
             static let smallLabelFont = UIFont(name: "Rubik", size: 13)
         }
-        
         enum LabelsTexts {
             static let validationLabelText = "Validation rules"
             static let validationMinLengthLabelText = "Min length 8 characters,"
