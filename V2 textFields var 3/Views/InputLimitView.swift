@@ -58,25 +58,25 @@ final class InputLimitView: UIView {
         inputLimitLabel.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(20)
+            make.height.equalTo(Constants.Constraints.labelHeightConstraint) //(20)
         }
         addSubview(charactersCounter)
         charactersCounter.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.trailing.equalToSuperview().inset(16)
-            make.height.equalTo(22)
+            make.trailing.equalToSuperview().inset(Constants.Constraints.trailingConstraint) //(16)
+            make.height.equalTo(Constants.Constraints.textfieldHeightConstraint)//(22)
         }
         addSubview(inputLimitView)
         inputLimitView.snp.makeConstraints { make in
-            make.top.equalTo(inputLimitLabel.snp.bottom).offset(4)
+            make.top.equalTo(inputLimitLabel.snp.bottom).offset(Constants.Constraints.topConstraint)//(4)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(36)
+            make.height.equalTo(Constants.Constraints.viewHeightConstraint)//(36)
         }
         addSubview(inputLimitTextField)
         inputLimitTextField.snp.makeConstraints { make in
-            make.top.equalTo(inputLimitView.snp.top).offset(7)
-            make.leading.trailing.equalToSuperview().inset(8)
-            make.height.equalTo(22)
+            make.top.equalTo(inputLimitView.snp.top).offset(Constants.Constraints.topToViewConstraint) //(7)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint) //(8)
+            make.height.equalTo(Constants.Constraints.textfieldHeightConstraint) //(22)
         }
     }
     
@@ -108,6 +108,15 @@ extension  InputLimitView: UITextFieldDelegate  {
 //MARK: constants
     extension  InputLimitView {
     enum Constants {
+        enum Constraints {
+            static let topConstraint = 4
+            static let topToViewConstraint = 7
+            static let trailingConstraint = 16
+            static let leadingConstraint = 8
+            static let labelHeightConstraint = 20
+            static let viewHeightConstraint = 36
+            static let textfieldHeightConstraint = 22
+        }
         enum LabelsSettings {
             static let lettersTextViewCornerRadius: CGFloat = 10
         }

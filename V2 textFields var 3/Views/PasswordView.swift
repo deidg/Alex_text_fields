@@ -81,54 +81,54 @@ final class PasswordView: UIView {
         validationLabel.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(20)
+            make.height.equalTo(Constants.Constraints.labelHeightConstraint) //(20)
         }
         addSubview(passwordTextView)
         passwordTextView.snp.makeConstraints { make in
-            make.top.equalTo(validationLabel.snp.bottom).offset(4)
+            make.top.equalTo(validationLabel.snp.bottom).offset(Constants.Constraints.topConstraint) //(4)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(36)
+            make.height.equalTo(Constants.Constraints.viewHeightConstraint) //(36)
         }
         addSubview(passwordTextField)
         passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextView.snp.top).offset(7)
-            make.leading.trailing.equalToSuperview().inset(8)
-            make.height.equalTo(22)
+            make.top.equalTo(passwordTextView.snp.top).offset(Constants.Constraints.topToViewConstraint)//(7)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)//(8)
+            make.height.equalTo(Constants.Constraints.textfieldHeightConstraint)//(22)
         }
         addSubview(validationRulesView)
         validationRulesView.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextView.snp.bottom).offset(8)
-            make.leading.trailing.equalToSuperview().inset(24)
-            make.height.equalTo(120)
+            make.top.equalTo(passwordTextView.snp.bottom).offset(Constants.Constraints.leadingConstraint)//(8)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.rulesViewLeading)//(24)
+            make.height.equalTo(Constants.Constraints.rulesViewHeight)//(120)
         }
         
         validationRulesView.addSubview(validationMinLengthLabel)
         validationMinLengthLabel.snp.makeConstraints{ make in
-            make.top.equalTo(validationRulesView.snp.top).offset(8)
+            make.top.equalTo(validationRulesView.snp.top).offset(Constants.Constraints.leadingConstraint)//(8)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(15)
+            make.height.equalTo(Constants.Constraints.rulesLabelHeight)//(15)
         }
         validationRulesView.addSubview(validationDigitLabel)
         validationDigitLabel.snp.makeConstraints{ make in
-            make.top.equalTo(validationMinLengthLabel.snp.bottom).offset(8)
+            make.top.equalTo(validationMinLengthLabel.snp.bottom).offset(Constants.Constraints.leadingConstraint)//(8)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(15)
+            make.height.equalTo(Constants.Constraints.rulesLabelHeight)//(15)
         }
         validationRulesView.addSubview(validationLowerCaseLabel)
         validationLowerCaseLabel.snp.makeConstraints{ make in
-            make.top.equalTo(validationDigitLabel.snp.bottom).offset(8)
+            make.top.equalTo(validationDigitLabel.snp.bottom).offset(Constants.Constraints.leadingConstraint)//(8)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(15)
+            make.height.equalTo(Constants.Constraints.rulesLabelHeight)//(15)
         }
         validationRulesView.addSubview(validationCapitalCaseLabel)
         validationCapitalCaseLabel.snp.makeConstraints{ make in
-            make.top.equalTo(validationLowerCaseLabel.snp.bottom).offset(8)
+            make.top.equalTo(validationLowerCaseLabel.snp.bottom).offset(Constants.Constraints.leadingConstraint)//(8)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(15)
+            make.height.equalTo(Constants.Constraints.rulesLabelHeight)//(15)
         }
     }
     private func defaultConfiguration() {
@@ -178,6 +178,18 @@ extension PasswordView: UITextFieldDelegate  {
 //MARK: constants
     extension  PasswordView {
     enum Constants {
+        enum Constraints {
+            static let topConstraint = 4
+            static let topToViewConstraint = 7
+            static let trailingConstraint = 16
+            static let leadingConstraint = 8
+            static let labelHeightConstraint = 20
+            static let rulesLabelHeight = 15
+            static let rulesViewLeading = 24
+            static let viewHeightConstraint = 36
+            static let textfieldHeightConstraint = 22
+            static let rulesViewHeight = 120
+        }
         enum LabelsSettings {
             static let lettersTextViewCornerRadius: CGFloat = 10
         }
