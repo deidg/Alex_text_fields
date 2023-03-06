@@ -137,7 +137,7 @@ class PasswordView: UIView {
         passwordTextField.delegate = self
     }
 }
-
+//MARK: TextFieldDelegate
 extension PasswordView: UITextFieldDelegate  {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if let text = passwordTextField.text,
@@ -176,7 +176,7 @@ extension PasswordView: UITextFieldDelegate  {
         return true
     }
 }
-    
+//MARK: constants
     extension  PasswordView {
     enum Constants {
         enum LabelsSettings {

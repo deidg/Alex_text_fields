@@ -68,6 +68,7 @@ class MaskView: UIView {
     }
 }
 
+//MARK: TextFieldDelegate
 extension  MaskView: UITextFieldDelegate  {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let allowedCharacters = CharacterSet.decimalDigits.inverted
@@ -75,6 +76,7 @@ extension  MaskView: UITextFieldDelegate  {
         return allowedCharacters.isSuperset(of: charSet)
     }
 }
+//MARK: constants
 extension  MaskView {
     enum Constants {
         enum LabelsSettings {

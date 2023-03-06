@@ -86,6 +86,7 @@ class CounterView: UIView {
     }
 }
 
+//MARK: TextFieldDelegate
 extension  CounterView: UITextFieldDelegate  {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -103,7 +104,8 @@ extension  CounterView: UITextFieldDelegate  {
         return lengthToAdd <= 10
     }
 }
-    
+
+//MARK: constants
     extension  CounterView {
     enum Constants {
         enum LabelsSettings {

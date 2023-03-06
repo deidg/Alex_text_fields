@@ -17,24 +17,19 @@ final class MainViewController: UIViewController {
     let maskView = MaskView()
     let linkView = LinkView()
     let passwordView = PasswordView()
-    
     var activeTextField : UITextField? = nil
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupItemsOnView()
         defaultConfiguration()
         gesturesRecognitions()
-        
-        
         linkView.delegate = self
     }
     
-    //MARK: additional views
+    //MARK: views
     private let scrollView = UIScrollView()
     private let contentView = UIView()
-    
-    
+    //MARK: elements
     private let titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = Constants.LabelsTexts.mainTitleLabeText
@@ -43,7 +38,6 @@ final class MainViewController: UIViewController {
         titleLabel.backgroundColor = .white
         return titleLabel
     }()
-    
     private func setupItemsOnView() {
         view.addSubview(scrollView)
         scrollView.snp.makeConstraints{ make in
@@ -55,7 +49,6 @@ final class MainViewController: UIViewController {
         contentView.snp.makeConstraints { make in
             make.top.width.height.equalTo(scrollView)
         }
-        
         //  Textlabel
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints{ make in
@@ -125,8 +118,8 @@ extension MainViewController: LinkViewDelegate {
     }
 }
 
+//MARK: constants
 extension MainViewController {
-    //MARK: constants
     enum Constants {
         enum LabelsFonts {
             static let mainLabelFont = UIFont(name: "Rubik-Medium", size: 34)

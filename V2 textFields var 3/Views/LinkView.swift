@@ -82,6 +82,7 @@ class LinkView: UIView {
     }
 }
 
+//MARK: TextFieldDelegate
 extension  LinkView: UITextFieldDelegate  {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == linkTextField {
@@ -121,7 +122,7 @@ extension  LinkView: UITextFieldDelegate  {
         controller.dismiss(animated: true, completion: nil)
     }
 }
-    
+//MARK: constants
     extension  LinkView{
     enum Constants {
         enum LabelsSettings {
