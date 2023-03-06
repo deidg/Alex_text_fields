@@ -48,19 +48,19 @@ final class OnlyCharView: UIView {
         onlyCharLabel.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(Constants.Constraints.labelHeightConstraint)//(20)
+            make.height.equalTo(Constants.Constraints.labelHeightConstraint)
         }
         addSubview(onlyCharTextView)
         onlyCharTextView.snp.makeConstraints { make in
-            make.top.equalTo(onlyCharLabel.snp.bottom).offset(Constants.Constraints.topConstraint) //(4)
+            make.top.equalTo(onlyCharLabel.snp.bottom).offset(Constants.Constraints.topConstraint)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(Constants.Constraints.viewHeightConstraint) //(36)
+            make.height.equalTo(Constants.Constraints.viewHeightConstraint)
         }
         addSubview(onlyCharTextField)
         onlyCharTextField.snp.makeConstraints { make in
-            make.top.equalTo(onlyCharTextView.snp.top).offset(Constants.Constraints.topToViewConstraint) //(7)
-            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint) //(8)
-            make.height.equalTo(Constants.Constraints.textfieldHeightConstraint) //(22)
+            make.top.equalTo(onlyCharTextView.snp.top).offset(Constants.Constraints.topToViewConstraint)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)
+            make.height.equalTo(Constants.Constraints.textfieldHeightConstraint)
         }
     }
     private func defaultConfiguration() {

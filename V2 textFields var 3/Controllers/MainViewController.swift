@@ -53,44 +53,44 @@ final class MainViewController: UIViewController {
         // titleLabel
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints{ make in
-            make.top.equalToSuperview().offset(Constants.Constraints.titleTopToSuperViewConstraint) //(92)
-            make.trailing.leading.equalToSuperview().inset(Constants.Constraints.leadingConstraint) //(16)
-            make.height.equalTo(Constants.Constraints.titleLabelHeightConstraint) //(41)
+            make.top.equalToSuperview().offset(Constants.Constraints.titleTopToSuperViewConstraint)
+            make.trailing.leading.equalToSuperview().inset(Constants.Constraints.leadingConstraint)
+            make.height.equalTo(Constants.Constraints.titleLabelHeightConstraint) 
         }
         // noDigitsView
         contentView.addSubview(noDigitsView)
         noDigitsView.snp.makeConstraints{make in
-            make.top.equalToSuperview().offset(Constants.Constraints.noDigitsViewConstraint) //(163)
-            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint) //(16)
-            make.height.equalTo(Constants.Constraints.heightConstraint)//(60)
+            make.top.equalToSuperview().offset(Constants.Constraints.noDigitsViewConstraint)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)
+            make.height.equalTo(Constants.Constraints.heightConstraint)
         }
         // inputLimitView
         contentView.addSubview(inputLimitView)
         inputLimitView.snp.makeConstraints{make in
-            make.top.equalTo(noDigitsView.snp.bottom).offset(Constants.Constraints.topConstraint)//(30)
-            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)//(16)
-            make.height.equalTo(Constants.Constraints.heightConstraint)//(60)
+            make.top.equalTo(noDigitsView.snp.bottom).offset(Constants.Constraints.topConstraint)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)
+            make.height.equalTo(Constants.Constraints.heightConstraint)
         }
         // onlyCharView
         contentView.addSubview(onlyCharView)
         onlyCharView.snp.makeConstraints{make in
-            make.top.equalTo(inputLimitView.snp.bottom).offset(Constants.Constraints.topConstraint)//(30)
-            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)//(16)
-            make.height.equalTo(Constants.Constraints.heightConstraint)//(60)
+            make.top.equalTo(inputLimitView.snp.bottom).offset(Constants.Constraints.topConstraint)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)
+            make.height.equalTo(Constants.Constraints.heightConstraint)
         }
         // linkView
         contentView.addSubview(linkView)
         linkView.snp.makeConstraints{make in
-            make.top.equalTo(onlyCharView.snp.bottom).offset(Constants.Constraints.topConstraint)//(30)
-            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)  //(16)
-            make.height.equalTo(Constants.Constraints.heightConstraint)//(60)
+            make.top.equalTo(onlyCharView.snp.bottom).offset(Constants.Constraints.topConstraint)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)
+            make.height.equalTo(Constants.Constraints.heightConstraint)
         }
         // passwordView
         contentView.addSubview(passwordView)
         passwordView.snp.makeConstraints{make in
-            make.top.equalTo(linkView.snp.bottom).offset(Constants.Constraints.topConstraint)//(30)
-            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)  //(16)
-            make.height.equalTo(Constants.Constraints.heightConstraint)//(60)
+            make.top.equalTo(linkView.snp.bottom).offset(Constants.Constraints.topConstraint)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)
+            make.height.equalTo(Constants.Constraints.heightConstraint)
         }
     }
     

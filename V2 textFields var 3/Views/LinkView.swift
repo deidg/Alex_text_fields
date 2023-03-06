@@ -12,7 +12,7 @@ import SafariServices
 protocol LinkViewDelegate: AnyObject {
     func openURL(url: URL)
     
-//    func safariViewControllerDidFinish(_ controller: SFSafariViewController)
+    //    func safariViewControllerDidFinish(_ controller: SFSafariViewController)
 }
 
 final class LinkView: UIView {
@@ -60,19 +60,19 @@ final class LinkView: UIView {
         linkLabel.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(Constants.Constraints.labelHeightConstraint)//(20)
+            make.height.equalTo(Constants.Constraints.labelHeightConstraint)
         }
         addSubview(linkTextView)
         linkTextView.snp.makeConstraints { make in
-            make.top.equalTo(linkLabel.snp.bottom).offset(Constants.Constraints.topConstraint)//(4)
+            make.top.equalTo(linkLabel.snp.bottom).offset(Constants.Constraints.topConstraint)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(Constants.Constraints.viewHeightConstraint) //(36)
+            make.height.equalTo(Constants.Constraints.viewHeightConstraint)
         }
         addSubview(linkTextField)
         linkTextField.snp.makeConstraints { make in
-            make.top.equalTo(linkTextView.snp.top).offset(Constants.Constraints.topToViewConstraint) //(7)
-            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)//(8)
-            make.height.equalTo(Constants.Constraints.textfieldHeightConstraint) //(22)
+            make.top.equalTo(linkTextView.snp.top).offset(Constants.Constraints.topToViewConstraint)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)
+            make.height.equalTo(Constants.Constraints.textfieldHeightConstraint)
         }
     }
     
@@ -123,7 +123,7 @@ extension  LinkView: UITextFieldDelegate  {
     }
 }
 //MARK: constants
-    extension  LinkView{
+extension  LinkView{
     enum Constants {
         enum Constraints {
             static let topConstraint = 4

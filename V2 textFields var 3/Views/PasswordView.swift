@@ -81,54 +81,54 @@ final class PasswordView: UIView {
         validationLabel.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(Constants.Constraints.labelHeightConstraint) //(20)
+            make.height.equalTo(Constants.Constraints.labelHeightConstraint)
         }
         addSubview(passwordTextView)
         passwordTextView.snp.makeConstraints { make in
-            make.top.equalTo(validationLabel.snp.bottom).offset(Constants.Constraints.topConstraint) //(4)
+            make.top.equalTo(validationLabel.snp.bottom).offset(Constants.Constraints.topConstraint)
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(Constants.Constraints.viewHeightConstraint) //(36)
+            make.height.equalTo(Constants.Constraints.viewHeightConstraint)
         }
         addSubview(passwordTextField)
         passwordTextField.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextView.snp.top).offset(Constants.Constraints.topToViewConstraint)//(7)
-            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)//(8)
-            make.height.equalTo(Constants.Constraints.textfieldHeightConstraint)//(22)
+            make.top.equalTo(passwordTextView.snp.top).offset(Constants.Constraints.topToViewConstraint)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.leadingConstraint)
+            make.height.equalTo(Constants.Constraints.textfieldHeightConstraint)
         }
         addSubview(validationRulesView)
         validationRulesView.snp.makeConstraints { make in
-            make.top.equalTo(passwordTextView.snp.bottom).offset(Constants.Constraints.leadingConstraint)//(8)
-            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.rulesViewLeading)//(24)
-            make.height.equalTo(Constants.Constraints.rulesViewHeight)//(120)
+            make.top.equalTo(passwordTextView.snp.bottom).offset(Constants.Constraints.leadingConstraint)
+            make.leading.trailing.equalToSuperview().inset(Constants.Constraints.rulesViewLeading)
+            make.height.equalTo(Constants.Constraints.rulesViewHeight)
         }
         
         validationRulesView.addSubview(validationMinLengthLabel)
         validationMinLengthLabel.snp.makeConstraints{ make in
-            make.top.equalTo(validationRulesView.snp.top).offset(Constants.Constraints.leadingConstraint)//(8)
+            make.top.equalTo(validationRulesView.snp.top).offset(Constants.Constraints.leadingConstraint)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(Constants.Constraints.rulesLabelHeight)//(15)
+            make.height.equalTo(Constants.Constraints.rulesLabelHeight)
         }
         validationRulesView.addSubview(validationDigitLabel)
         validationDigitLabel.snp.makeConstraints{ make in
-            make.top.equalTo(validationMinLengthLabel.snp.bottom).offset(Constants.Constraints.leadingConstraint)//(8)
+            make.top.equalTo(validationMinLengthLabel.snp.bottom).offset(Constants.Constraints.leadingConstraint)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(Constants.Constraints.rulesLabelHeight)//(15)
+            make.height.equalTo(Constants.Constraints.rulesLabelHeight)
         }
         validationRulesView.addSubview(validationLowerCaseLabel)
         validationLowerCaseLabel.snp.makeConstraints{ make in
-            make.top.equalTo(validationDigitLabel.snp.bottom).offset(Constants.Constraints.leadingConstraint)//(8)
+            make.top.equalTo(validationDigitLabel.snp.bottom).offset(Constants.Constraints.leadingConstraint)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(Constants.Constraints.rulesLabelHeight)//(15)
+            make.height.equalTo(Constants.Constraints.rulesLabelHeight)
         }
         validationRulesView.addSubview(validationCapitalCaseLabel)
         validationCapitalCaseLabel.snp.makeConstraints{ make in
-            make.top.equalTo(validationLowerCaseLabel.snp.bottom).offset(Constants.Constraints.leadingConstraint)//(8)
+            make.top.equalTo(validationLowerCaseLabel.snp.bottom).offset(Constants.Constraints.leadingConstraint)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
-            make.height.equalTo(Constants.Constraints.rulesLabelHeight)//(15)
+            make.height.equalTo(Constants.Constraints.rulesLabelHeight)
         }
     }
     private func defaultConfiguration() {
