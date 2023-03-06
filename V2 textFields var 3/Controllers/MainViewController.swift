@@ -11,34 +11,14 @@ import SafariServices
 import JMMaskTextField_Swift
 
 final class MainViewController: UIViewController {
-    
-    let noDigitsView = NoDigitsView()
-    let inputLimitView = InputLimitView()
-    let onlyCharView = OnlyCharView()
-    let linkView = LinkView()
-    let passwordView = PasswordView()
-    var activeTextField : UITextField? = nil
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupItemsOnView()
-        defaultConfiguration()
-        setupKeyboardHiding()
-        linkView.delegate = self
-    }
-    
-    private func setupKeyboardHiding() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    let textFieldFrame = view.convert(currentTextField.frame, from: currentTextField.superview)
-//    resetButton.addTarget(self, action: #selector(resetPasswordButtonTapped), for: .primaryActionTriggered)
-    
-    
-    //MARK: views
+    //MARK: UI elements
+    private let noDigitsView = NoDigitsView()
+    private let inputLimitView = InputLimitView()
+    private let onlyCharView = OnlyCharView()
+    private let linkView = LinkView()
+    private let passwordView = PasswordView()
     private let scrollView = UIScrollView()
     private let contentView = UIView()
-    //MARK: elements
     private let titleLabel: UILabel = {
         let titleLabel = UILabel()
         titleLabel.text = Constants.LabelsTexts.mainTitleLabeText
@@ -47,6 +27,14 @@ final class MainViewController: UIViewController {
         titleLabel.backgroundColor = .white
         return titleLabel
     }()
+    //MARK: lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupItemsOnView()
+        defaultConfiguration()
+        addTapToHideKeyboard()
+        observeKeyboardNotificaton()
+    }
     //MARK: Items On View
     private func setupItemsOnView() {
         view.addSubview(scrollView)
@@ -57,7 +45,7 @@ final class MainViewController: UIViewController {
         }
         scrollView.addSubview(contentView)
         contentView.snp.makeConstraints { make in
-            make.top.width.height.equalTo(scrollView)
+            make.edges.width.height.equalTo(scrollView)
         }
         // titleLabel
         contentView.addSubview(titleLabel)
@@ -103,15 +91,9 @@ final class MainViewController: UIViewController {
         }
     }
     
-    
-    
-    
-    
-    
     private func defaultConfiguration() {
         self.view.backgroundColor = .white
-        
-        
+        linkView.delegate = self
     }
 }
 
@@ -122,33 +104,50 @@ extension MainViewController: LinkViewDelegate {
     }
 }
 
-//MARK: constants
+
 extension MainViewController {
+ 
+    private func addTapToHideKeyboard() {
+        let tap = UITapGestureRecognizer(
+            target: self,
+            action: #selector(hideKeyboard(gesture:))
+        )
+        contentView.addGestureRecognizer(tap)
+    }
     
-    @objc func keyboardWillShow(sender: NSNotification) {
-        guard let userInfo = sender.userInfo,
-              let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
-              let currentTextField = UIResponder.currentFirst() as? UITextField else { return }
+    private func observeKeyboardNotificaton() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow(sender:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide(sender:)),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+    }
         
-        let keyboardTopY = keyboardFrame.cgRectValue.origin.y
-        let convertedTextFieldFrame = view.convert(currentTextField.frame, from: currentTextField.superview)
-        let textFieldBottomY = convertedTextFieldFrame.origin.y + convertedTextFieldFrame.size.height
+        @objc private func keyboardWillShow(sender: NSNotification) {
+            guard let userInfo = sender.userInfo else { return }
+            guard var keyboardFrame = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue else { return }
+            print(keyboardFrame)
+            keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+            var contentInset: UIEdgeInsets = self.scrollView.contentInset
+            contentInset.bottom = keyboardFrame.size.height
+            scrollView.contentInset = contentInset
+            
+        }
         
-        if textFieldBottomY > keyboardTopY {
-            let textBoxY = convertedTextFieldFrame.origin.y
-            let newFrameY = (textBoxY - keyboardTopY / 2) * -1
-            view.frame.origin.y = newFrameY
+        @objc private func keyboardWillHide(sender: NSNotification) {
+            let contentInset: UIEdgeInsets = UIEdgeInsets.zero
+            scrollView.contentInset = contentInset
+        }
+        
+        @objc private func hideKeyboard(gesture: UITapGestureRecognizer) {
+            view.endEditing(true)
         }
     }
-    
-    @objc func keyboardWillHide(notification: NSNotification) {  //@objc
-        view.frame.origin.y = 0
-    }
-    //    }
-    
-    
-    
-    
+
+//MARK: constants
     enum Constants {
         enum LabelsFonts {
             static let mainLabelFont = UIFont(name: "Rubik-Medium", size: 34)
@@ -166,41 +165,13 @@ extension MainViewController {
             static let heightConstraint = 60
         }
     }
-}
-//}
-extension MainViewController : UITextFieldDelegate {
-    //MARK: textediting
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        self.activeTextField = textField
-    }
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        self.activeTextField = nil
-    }
-}
-//MARK: keyboard
-//extension MainViewController {
-//
-//    }
 //}
 
-extension UIResponder {
+//MARK: keyboard
     
-    private struct Static {
-        static weak var responder: UIResponder?
-    }
-    
-    /// Finds the current first responder
-    /// - Returns: the current UIResponder if it exists
-    static func currentFirst() -> UIResponder? {
-        Static.responder = nil
-        UIApplication.shared.sendAction(#selector(UIResponder._trap), to: nil, from: nil, for: nil)
-        return Static.responder
-    }
-    
-    @objc private func _trap() {
-        Static.responder = self
-    }
-}
+
+
+
 
 
 
