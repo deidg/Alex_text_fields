@@ -13,12 +13,16 @@
 		FAA2EA2629B50F1F00C561E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA2529B50F1F00C561E9 /* AppDelegate.swift */; };
 		FAA2EA2829B50F1F00C561E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA2729B50F1F00C561E9 /* SceneDelegate.swift */; };
 		FAA2EA2A29B50F1F00C561E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA2929B50F1F00C561E9 /* ViewController.swift */; };
-		FAA2EA2D29B50F1F00C561E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2EA2B29B50F1F00C561E9 /* Main.storyboard */; };
 		FAA2EA2F29B50F2300C561E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA2EA2E29B50F2300C561E9 /* Assets.xcassets */; };
 		FAA2EA3229B50F2300C561E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAA2EA3029B50F2300C561E9 /* LaunchScreen.storyboard */; };
 		FAA2EA3D29B50F2400C561E9 /* V2_textFields_var_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA3C29B50F2400C561E9 /* V2_textFields_var_3Tests.swift */; };
 		FAA2EA4729B50F2400C561E9 /* V2_textFields_var_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA4629B50F2400C561E9 /* V2_textFields_var_3UITests.swift */; };
 		FAA2EA4929B50F2400C561E9 /* V2_textFields_var_3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA4829B50F2400C561E9 /* V2_textFields_var_3UITestsLaunchTests.swift */; };
+		FAA2EA5A29B5136900C561E9 /* NoDigitsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA5929B5136900C561E9 /* NoDigitsView.swift */; };
+		FAA2EA5C29B5138B00C561E9 /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA5B29B5138B00C561E9 /* CounterView.swift */; };
+		FAA2EA5E29B513AF00C561E9 /* MaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA5D29B513AF00C561E9 /* MaskView.swift */; };
+		FAA2EA6029B513CC00C561E9 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA5F29B513CC00C561E9 /* LinkView.swift */; };
+		FAA2EA6229B513F100C561E9 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA6129B513F100C561E9 /* PasswordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +55,6 @@
 		FAA2EA2529B50F1F00C561E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAA2EA2729B50F1F00C561E9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FAA2EA2929B50F1F00C561E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FAA2EA2C29B50F1F00C561E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAA2EA2E29B50F2300C561E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAA2EA3129B50F2300C561E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAA2EA3329B50F2300C561E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +63,11 @@
 		FAA2EA4229B50F2400C561E9 /* V2 textFields var 3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "V2 textFields var 3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA2EA4629B50F2400C561E9 /* V2_textFields_var_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2_textFields_var_3UITests.swift; sourceTree = "<group>"; };
 		FAA2EA4829B50F2400C561E9 /* V2_textFields_var_3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2_textFields_var_3UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FAA2EA5929B5136900C561E9 /* NoDigitsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDigitsView.swift; sourceTree = "<group>"; };
+		FAA2EA5B29B5138B00C561E9 /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		FAA2EA5D29B513AF00C561E9 /* MaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskView.swift; sourceTree = "<group>"; };
+		FAA2EA5F29B513CC00C561E9 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
+		FAA2EA6129B513F100C561E9 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		FC8932A49F0497A45181E083 /* libPods-V2 textFields var 3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-V2 textFields var 3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,7 +109,6 @@
 				F29F111057365C62E1A79249 /* Pods-V2 textFields var 3Tests.debug.xcconfig */,
 				A872FB1BE7E07AA4F7FA766C /* Pods-V2 textFields var 3Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -142,10 +149,10 @@
 			children = (
 				FAA2EA2529B50F1F00C561E9 /* AppDelegate.swift */,
 				FAA2EA2729B50F1F00C561E9 /* SceneDelegate.swift */,
-				FAA2EA2929B50F1F00C561E9 /* ViewController.swift */,
-				FAA2EA2B29B50F1F00C561E9 /* Main.storyboard */,
-				FAA2EA2E29B50F2300C561E9 /* Assets.xcassets */,
-				FAA2EA3029B50F2300C561E9 /* LaunchScreen.storyboard */,
+				FAA2EA5829B5130A00C561E9 /* Views */,
+				FAA2EA5529B5129B00C561E9 /* Delegates */,
+				FAA2EA5629B512DD00C561E9 /* Controllers */,
+				FAA2EA5729B512F400C561E9 /* Assets */,
 				FAA2EA3329B50F2300C561E9 /* Info.plist */,
 			);
 			path = "V2 textFields var 3";
@@ -166,6 +173,42 @@
 				FAA2EA4829B50F2400C561E9 /* V2_textFields_var_3UITestsLaunchTests.swift */,
 			);
 			path = "V2 textFields var 3UITests";
+			sourceTree = "<group>";
+		};
+		FAA2EA5529B5129B00C561E9 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		FAA2EA5629B512DD00C561E9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2EA2929B50F1F00C561E9 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FAA2EA5729B512F400C561E9 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2EA2E29B50F2300C561E9 /* Assets.xcassets */,
+				FAA2EA3029B50F2300C561E9 /* LaunchScreen.storyboard */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FAA2EA5829B5130A00C561E9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2EA5929B5136900C561E9 /* NoDigitsView.swift */,
+				FAA2EA5B29B5138B00C561E9 /* CounterView.swift */,
+				FAA2EA5D29B513AF00C561E9 /* MaskView.swift */,
+				FAA2EA5F29B513CC00C561E9 /* LinkView.swift */,
+				FAA2EA6129B513F100C561E9 /* PasswordView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +320,6 @@
 			files = (
 				FAA2EA3229B50F2300C561E9 /* LaunchScreen.storyboard in Resources */,
 				FAA2EA2F29B50F2300C561E9 /* Assets.xcassets in Resources */,
-				FAA2EA2D29B50F1F00C561E9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,8 +414,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAA2EA2A29B50F1F00C561E9 /* ViewController.swift in Sources */,
+				FAA2EA5A29B5136900C561E9 /* NoDigitsView.swift in Sources */,
+				FAA2EA5E29B513AF00C561E9 /* MaskView.swift in Sources */,
+				FAA2EA6229B513F100C561E9 /* PasswordView.swift in Sources */,
 				FAA2EA2629B50F1F00C561E9 /* AppDelegate.swift in Sources */,
 				FAA2EA2829B50F1F00C561E9 /* SceneDelegate.swift in Sources */,
+				FAA2EA6029B513CC00C561E9 /* LinkView.swift in Sources */,
+				FAA2EA5C29B5138B00C561E9 /* CounterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,14 +457,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FAA2EA2B29B50F1F00C561E9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FAA2EA2C29B50F1F00C561E9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FAA2EA3029B50F2300C561E9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -555,7 +594,8 @@
 				INFOPLIST_FILE = "V2 textFields var 3/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				"INFOPLIST_KEY_UIMainStoryboardFile[sdk=*]" = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -584,7 +624,7 @@
 				INFOPLIST_FILE = "V2 textFields var 3/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
