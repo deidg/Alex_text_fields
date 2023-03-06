@@ -22,7 +22,6 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
         setupItemsOnView()
         defaultConfiguration()
-//        gesturesRecognitions()
         linkView.delegate = self
     }
     
@@ -55,7 +54,7 @@ final class MainViewController: UIViewController {
         titleLabel.snp.makeConstraints{ make in
             make.top.equalToSuperview().offset(Constants.Constraints.titleTopToSuperViewConstraint)
             make.trailing.leading.equalToSuperview().inset(Constants.Constraints.leadingConstraint)
-            make.height.equalTo(Constants.Constraints.titleLabelHeightConstraint) 
+            make.height.equalTo(Constants.Constraints.titleLabelHeightConstraint)
         }
         // noDigitsView
         contentView.addSubview(noDigitsView)
@@ -97,19 +96,8 @@ final class MainViewController: UIViewController {
     private func defaultConfiguration() {
         self.view.backgroundColor = .white
         
-        //стереть гестурз при финальной чистке
-        //        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainViewController.backgroundTap))
-        //        self.view.addGestureRecognizer(tapGestureRecognizer)
-        //        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        //        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+   
     }
-    //норм. оставить тут
-//    private func gesturesRecognitions() {
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(MainViewController.backgroundTap))
-//        self.view.addGestureRecognizer(tapGestureRecognizer)
-//        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(MainViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-//    }
 }
 
 //MARK: extension ViewController
@@ -121,6 +109,12 @@ extension MainViewController: LinkViewDelegate {
 
 //MARK: constants
 extension MainViewController {
+    
+      
+    
+    
+    
+    
     enum Constants {
         enum LabelsFonts {
             static let mainLabelFont = UIFont(name: "Rubik-Medium", size: 34)
@@ -147,74 +141,10 @@ extension MainViewController : UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.activeTextField = nil
     }
-    
-    //MARK: keyboard
-    private func addTapToHideKeyboard() {
-        let tap = UITapGestureRecognizer(
-            target: self,
-            action: #selector(hideKeyboard(gesture:))
-        )
-        contentView.addGestureRecognizer(tap)
-    }
-    private func observeKeyboardNotificaton() {
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShow(sender:)),
-                                               name: UIResponder.keyboardWillShowNotification,
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHide(sender:)),
-                                               name: UIResponder.keyboardWillHideNotification,
-                                               object: nil)
-    }
-    @objc private func keyboardWillShow(sender: NSNotification) {
-        guard let userInfo = sender.userInfo else { return }
-        guard var keyboardFrame = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue else { return }
-        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-        var contentInset: UIEdgeInsets = self.scrollView.contentInset
-        contentInset.bottom = keyboardFrame.size.height
-        scrollView.contentInset = contentInset
-    }
-    @objc private  func keyboardWillHide(sender: NSNotification) {
-        let contentInset: UIEdgeInsets = UIEdgeInsets.zero
-        scrollView.contentInset = contentInset
-    }
-    @objc private  func hideKeyboard(gesture: UITapGestureRecognizer) {
-        view.endEditing(true)
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
-    }
-    
-    
-    
-    
-    
-    
-    
-//    //MARK: keyboard
-//    @objc func keyboardWillShow(notification: NSNotification) {
-//        guard let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
-//            return
-//        }
-//        var shouldMoveViewUp = false
-//        if let activeTextField = activeTextField {
-//            let bottomOfTextField = activeTextField.convert(activeTextField.bounds, to: self.view).maxY;
-//            let topOfKeyboard = self.view.frame.height - keyboardSize.height
-//            if bottomOfTextField > topOfKeyboard {
-//                shouldMoveViewUp = true
-//            }
-//        }
-//        if(shouldMoveViewUp) {
-//            self.view.frame.origin.y = 0 - keyboardSize.height
-//        }
-//    }
-//    @objc func keyboardWillHide(notification: NSNotification) {
-//        self.view.frame.origin.y = 0
-//    }
-//    @objc func backgroundTap(_ sender: UITapGestureRecognizer) {
-//        self.view.endEditing(true)
-//    }
 }
+//MARK: keyboard
+    
+
 
 
 
