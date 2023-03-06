@@ -96,7 +96,7 @@ final class MainViewController: UIViewController {
     }
 }
 
-//MARK: extension ViewController
+//MARK: extension ViewController - keyboard
 extension MainViewController {
     private func addTapToHideKeyboard() {
         let tap = UITapGestureRecognizer(
@@ -132,7 +132,7 @@ extension MainViewController {
     @objc private func hideKeyboard(gesture: UITapGestureRecognizer) {
         view.endEditing(true)
     }
-//MARK: constants
+    //MARK: extension ViewController -  Constants
 enum Constants {
     enum LabelsFonts {
         static let mainLabelFont = UIFont(name: "Rubik-Medium", size: 34)
