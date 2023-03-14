@@ -78,7 +78,7 @@ final class LinkView: UIView {
 }
 
 //MARK: linkTextFieldDelegate
-extension  LinkView: UITextFieldDelegate  {
+extension LinkView: UITextFieldDelegate  {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if textField == linkTextField {
@@ -116,7 +116,7 @@ extension  LinkView: UITextFieldDelegate  {
     }
 }
 //MARK: constants
-extension  LinkView{
+extension LinkView {
     enum Constants {
         enum Constraints {
             static let topConstraint = 4

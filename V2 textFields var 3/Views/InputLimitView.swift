@@ -87,7 +87,7 @@ final class InputLimitView: UIView {
 }
 
 //MARK: inputLimitTextFieldDelegate
-extension  InputLimitView: UITextFieldDelegate  {
+extension InputLimitView: UITextFieldDelegate  {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         let currentText = textField.text ?? ""
@@ -106,7 +106,7 @@ extension  InputLimitView: UITextFieldDelegate  {
 }
 
 //MARK: constants
-extension  InputLimitView {
+extension InputLimitView {
     enum Constants {
         enum Constraints {
             static let topConstraint = 4

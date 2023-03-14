@@ -31,7 +31,6 @@ final class NoDigitsView: UIView {
         noDigitsTextField.font = Constants.TextFields.textFieldFont
         noDigitsTextField.isEnabled = true
         noDigitsTextField.keyboardType = .alphabet
-        noDigitsTextField.becomeFirstResponder()
         return noDigitsTextField
     }()
     //MARK: Initialization
@@ -71,16 +70,15 @@ final class NoDigitsView: UIView {
 }
 
 //MARK: noDigitsTextFieldDelegate
-extension  NoDigitsView: UITextFieldDelegate  {
+extension NoDigitsView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let allowedCharacters = CharacterSet.decimalDigits.inverted
         let charSet = CharacterSet(charactersIn: string)
         return allowedCharacters.isSuperset(of: charSet)
     }
 }
-
 //MARK: constants
-extension  NoDigitsView {
+extension NoDigitsView {
     enum Constants {
         enum Constraints {
             static let topConstraint = 4

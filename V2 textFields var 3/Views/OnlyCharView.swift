@@ -69,7 +69,7 @@ final class OnlyCharView: UIView {
 }
 
 //MARK: onlyCharTextFieldDelegate
-extension  OnlyCharView: UITextFieldDelegate  {
+extension OnlyCharView: UITextFieldDelegate  {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let allowedCharacters = CharacterSet.decimalDigits.inverted
         let charSet = CharacterSet(charactersIn: string)
@@ -77,7 +77,7 @@ extension  OnlyCharView: UITextFieldDelegate  {
     }
 }
 //MARK: constants
-extension  OnlyCharView {
+extension OnlyCharView {
     enum Constants {
         enum Constraints {
             static let topConstraint = 4
