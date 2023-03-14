@@ -7,8 +7,6 @@
 
 import UIKit
 import SnapKit
-import SafariServices
-import JMMaskTextField_Swift
 
 final class MainViewController: UIViewController {
     //MARK: UI elements
@@ -131,32 +129,34 @@ extension MainViewController {
     @objc private func hideKeyboard(gesture: UITapGestureRecognizer) {
         view.endEditing(true)
     }
-    //MARK: extension ViewController -  Constants
-enum Constants {
-    enum LabelsFonts {
-        static let mainLabelFont = UIFont(name: "Rubik-Medium", size: 34)
-    }
-    enum LabelsTexts {
-        static let mainTitleLabeText = "Text Fields"
-    }
-    enum Constraints {
-        static let titleTopToSuperViewConstraint = 92
-        static let noDigitsViewConstraint = 163
-        static let topConstraint = 30
-        static let leadingConstraint = 16
-        static let trailingConstraint = 16
-        static let titleLabelHeightConstraint = 41
-        static let heightConstraint = 60
-    }
 }
-}
- // MARK: Delegate
+// MARK: Delegate
 extension MainViewController: LinkViewDelegate {
     func openURL(url: URL) {
         UIApplication.shared.open(url)
     }
 }
 
+extension MainViewController {
+    //MARK: extension ViewController -  Constants
+    enum Constants {
+        enum LabelsFonts {
+            static let mainLabelFont = UIFont(name: "Rubik-Medium", size: 34)
+        }
+        enum LabelsTexts {
+            static let mainTitleLabeText = "Text Fields"
+        }
+        enum Constraints {
+            static let titleTopToSuperViewConstraint = 92
+            static let noDigitsViewConstraint = 163
+            static let topConstraint = 30
+            static let leadingConstraint = 16
+            static let trailingConstraint = 16
+            static let titleLabelHeightConstraint = 41
+            static let heightConstraint = 60
+        }
+    }
+}
 
 
 

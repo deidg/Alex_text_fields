@@ -68,7 +68,7 @@ final class OnlyCharView: UIView {
     }
 }
 
-//MARK: TextFieldDelegate
+//MARK: onlyCharTextFieldDelegate
 extension  OnlyCharView: UITextFieldDelegate  {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let allowedCharacters = CharacterSet.decimalDigits.inverted

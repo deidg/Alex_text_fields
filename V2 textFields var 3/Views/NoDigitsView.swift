@@ -70,7 +70,7 @@ final class NoDigitsView: UIView {
     }
 }
 
-//MARK: TextFieldDelegate
+//MARK: noDigitsTextFieldDelegate
 extension  NoDigitsView: UITextFieldDelegate  {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let allowedCharacters = CharacterSet.decimalDigits.inverted
@@ -78,6 +78,7 @@ extension  NoDigitsView: UITextFieldDelegate  {
         return allowedCharacters.isSuperset(of: charSet)
     }
 }
+
 //MARK: constants
 extension  NoDigitsView {
     enum Constants {
