@@ -95,6 +95,8 @@ extension LinkView: UITextFieldDelegate  {
                             let url: URL?
                             if urlString.hasPrefix("http://") {
                                 url = URL(string: urlString)
+                            } else if urlString.hasPrefix("https://") {
+                                url = URL(string: urlString)
                             } else {
                                 url = URL(string: "http://" + urlString)
                             }
