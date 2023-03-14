@@ -118,7 +118,6 @@ extension MainViewController {
     @objc private func keyboardWillShow(sender: NSNotification) {
         guard let userInfo = sender.userInfo else { return }
         guard var keyboardFrame = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue else { return }
-        print(keyboardFrame)
         keyboardFrame = self.view.convert(keyboardFrame, from: nil)
         var contentInset: UIEdgeInsets = self.scrollView.contentInset
         contentInset.bottom = keyboardFrame.size.height

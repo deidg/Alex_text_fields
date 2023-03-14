@@ -88,8 +88,7 @@ extension  LinkView: UITextFieldDelegate  {
                 return linkTest.evaluate(with: link)
             }
             if isLinkValid(link) {
-                print("its valid LINK")
-                let delay : Double = 2.0 
+                let delay : Double = 2.0
                 DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                     func startBrowser(_ sender: Any) {
                         if let urlString = self.linkTextField.text {
