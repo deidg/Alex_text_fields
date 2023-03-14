@@ -10,20 +10,27 @@ import XCTest
 
 final class V2_textFields_var_3Tests: XCTestCase {
 
+    var noDigits: NoDigitsManager!
+    
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        try super.setUpWithError()
+        noDigits = NoDigitsManager()
+        
+        
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        noDigits = nil
+        try super.tearDownWithError()
+        
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        let simple = "2324"
+        let result = noDigits.isNoDigit(in: simple) //isNoDigit(in: "32423")
+        XCTAssertTrue(result)
+     
     }
 
     func testPerformanceExample() throws {

@@ -80,7 +80,6 @@ final class LinkView: UIView {
 //MARK: linkTextFieldDelegate
 extension LinkView: UITextFieldDelegate  {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         if textField == linkTextField {
             let link = linkTextField.text ?? ""
             func isLinkValid(_ link : String) -> Bool {
@@ -135,7 +134,6 @@ extension LinkView {
         enum LabelsFonts {
             static let smallLabelFont = UIFont(name: "Rubik", size: 13)
         }
-        
         enum LabelsTexts {
             static let linkLabelText = "Link"
             static let smallLabelTextColor = UIColor(red: 45/255, green: 45/255, blue: 45/255, alpha: 1)

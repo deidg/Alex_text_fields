@@ -26,6 +26,7 @@
 		FAA2EA6229B513F100C561E9 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2EA6129B513F100C561E9 /* PasswordView.swift */; };
 		FAA563D729B5BFFE000DF576 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA563D629B5BFFE000DF576 /* MainViewController.swift */; };
 		FAA563D929B64108000DF576 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA563D829B64108000DF576 /* UIResponder+Utils.swift */; };
+		FAADB49C29C0833F0073E265 /* NoDigitsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADB49B29C0833F0073E265 /* NoDigitsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		FAA2EA6129B513F100C561E9 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		FAA563D629B5BFFE000DF576 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FAA563D829B64108000DF576 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
+		FAADB49B29C0833F0073E265 /* NoDigitsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDigitsManager.swift; sourceTree = "<group>"; };
 		FC8932A49F0497A45181E083 /* libPods-V2 textFields var 3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-V2 textFields var 3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 		FAA2EA2429B50F1F00C561E9 /* V2 textFields var 3 */ = {
 			isa = PBXGroup;
 			children = (
+				FAADB49A29C083100073E265 /* Managers */,
 				FAA563D529B5BFBF000DF576 /* Other */,
 				FAA2EA5829B5130A00C561E9 /* Views */,
 				FAA2EA5629B512DD00C561E9 /* Controllers */,
@@ -226,6 +229,14 @@
 				FAA563D829B64108000DF576 /* UIResponder+Utils.swift */,
 			);
 			path = Other;
+			sourceTree = "<group>";
+		};
+		FAADB49A29C083100073E265 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FAADB49B29C0833F0073E265 /* NoDigitsManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,6 +469,7 @@
 				FAA2EA2829B50F1F00C561E9 /* SceneDelegate.swift in Sources */,
 				FAA563D729B5BFFE000DF576 /* MainViewController.swift in Sources */,
 				FAA2EA6029B513CC00C561E9 /* LinkView.swift in Sources */,
+				FAADB49C29C0833F0073E265 /* NoDigitsManager.swift in Sources */,
 				FAA2EA5C29B5138B00C561E9 /* InputLimitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,7 +637,7 @@
 				"INFOPLIST_KEY_UIMainStoryboardFile[sdk=*]" = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -654,7 +666,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
