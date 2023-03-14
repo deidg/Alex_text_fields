@@ -10,27 +10,23 @@ import XCTest
 
 final class V2_textFields_var_3Tests: XCTestCase {
 
-    var noDigits: NoDigitsManager!
+    var noDigitsManager: NoDigitsManager!
     
     
     override func setUpWithError() throws {
         try super.setUpWithError()
-        noDigits = NoDigitsManager()
-        
-        
+        noDigitsManager = NoDigitsManager()
     }
 
     override func tearDownWithError() throws {
-        noDigits = nil
+        noDigitsManager = nil
         try super.tearDownWithError()
-        
     }
 
-    func testExample() throws {
-        let simple = "2324"
-        let result = noDigits.isNoDigit(in: simple) //isNoDigit(in: "32423")
+    func testNoDigitsTextField() throws {
+        let simple = "gfdg"
+        let result = noDigitsManager.isNoDigit(in: simple)
         XCTAssertTrue(result)
-     
     }
 
     func testPerformanceExample() throws {
