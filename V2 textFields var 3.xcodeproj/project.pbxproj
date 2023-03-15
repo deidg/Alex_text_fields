@@ -246,11 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAA2EA4C29B50F2400C561E9 /* Build configuration list for PBXNativeTarget "V2 textFields var 3" */;
 			buildPhases = (
-				FAADB49D29C0F4050073E265 /* ShellScript */,
 				99C70CAF0839C2D510AA0C03 /* [CP] Check Pods Manifest.lock */,
 				FAA2EA1E29B50F1E00C561E9 /* Sources */,
 				FAA2EA1F29B50F1E00C561E9 /* Frameworks */,
 				FAA2EA2029B50F1E00C561E9 /* Resources */,
+				FAADB49D29C0F4050073E265 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -452,7 +452,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+			shellScript = " if which swiftlint >/dev/null; then\n swiftlint\n else\n echo \"warning: SwiftLint not installed, download from \n https://github.com/realm/SwiftLint\"\n fi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
