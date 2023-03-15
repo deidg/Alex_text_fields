@@ -28,14 +28,14 @@ final class V2_textFields_var_3Tests: XCTestCase {
     }
 
     func testNoDigitsTextField() throws {
-        let simple = "gfdg"
+        let simple = "fddgf"
         let result = noDigitsManager.isNoDigit(in: simple)
         XCTAssertTrue(result)
     }
 
     func testMaxLimit() throws {
-//        let currentText = textField.text ?? ""
-        let result = inputLimitManager
+        let inputText = "1234567890"//"1234567890VVV"//"1234567890"
+        let result = inputLimitManager.isMaxLimit(in: inputText)
         XCTAssertTrue(result)
     }
     
