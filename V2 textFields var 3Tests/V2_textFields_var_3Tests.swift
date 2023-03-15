@@ -11,15 +11,18 @@ import XCTest
 final class V2_textFields_var_3Tests: XCTestCase {
 
     var noDigitsManager: NoDigitsManager!
+    var inputLimitManager: InputLimitManager!
     
     
     override func setUpWithError() throws {
         try super.setUpWithError()
         noDigitsManager = NoDigitsManager()
+        inputLimitManager = InputLimitManager()
     }
 
     override func tearDownWithError() throws {
         noDigitsManager = nil
+        inputLimitManager = nil
         try super.tearDownWithError()
     }
 
@@ -29,6 +32,18 @@ final class V2_textFields_var_3Tests: XCTestCase {
         XCTAssertTrue(result)
     }
 
+    func testMaxLimit() throws {
+//        let currentText = textField.text ?? ""
+        let result = inputLimitManager.
+        XCTAssertTrue(result)
+    }
+    
+    
+    
+    
+    
+    
+    
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
