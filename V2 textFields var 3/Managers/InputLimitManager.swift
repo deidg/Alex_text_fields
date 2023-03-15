@@ -6,10 +6,21 @@
 //
 
 import Foundation
+import UIKit
 
 final class InputLimitManager {
-    func isMaxLimit(in string: String) -> Bool {
-//        let currentText = textField.text ?? ""
+    
+//    init(<#parameters#>) {
+//        var charactersCounter: UILabel
+//        var currentText: String
+//        
+//    }
+//    
+    
+    func isMaxLimit(currentText: String, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        //(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        //        let currentText = textField.text ?? ""
         guard let stringRange = Range(range, in: currentText) else { return false }
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
         let lengthToAdd = updatedText.count

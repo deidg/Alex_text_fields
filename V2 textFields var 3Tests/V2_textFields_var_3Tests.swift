@@ -12,6 +12,7 @@ final class V2_textFields_var_3Tests: XCTestCase {
 
     var noDigitsManager: NoDigitsManager!
     var inputLimitManager: InputLimitManager!
+//    var OnlyCharManager: OnlyCharManager!
     
     
     override func setUpWithError() throws {

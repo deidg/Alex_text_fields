@@ -28,6 +28,7 @@
 		FAA563D929B64108000DF576 /* UIResponder+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA563D829B64108000DF576 /* UIResponder+Utils.swift */; };
 		FAADB49C29C0833F0073E265 /* NoDigitsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADB49B29C0833F0073E265 /* NoDigitsManager.swift */; };
 		FAADB49F29C1D4430073E265 /* InputLimitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADB49E29C1D4430073E265 /* InputLimitManager.swift */; };
+		FAADB4A129C1E0700073E265 /* OnlyCharManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADB4A029C1E06F0073E265 /* OnlyCharManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		FAA563D829B64108000DF576 /* UIResponder+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIResponder+Utils.swift"; sourceTree = "<group>"; };
 		FAADB49B29C0833F0073E265 /* NoDigitsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDigitsManager.swift; sourceTree = "<group>"; };
 		FAADB49E29C1D4430073E265 /* InputLimitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLimitManager.swift; sourceTree = "<group>"; };
+		FAADB4A029C1E06F0073E265 /* OnlyCharManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCharManager.swift; sourceTree = "<group>"; };
 		FC8932A49F0497A45181E083 /* libPods-V2 textFields var 3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-V2 textFields var 3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -238,6 +240,7 @@
 			children = (
 				FAADB49B29C0833F0073E265 /* NoDigitsManager.swift */,
 				FAADB49E29C1D4430073E265 /* InputLimitManager.swift */,
+				FAADB4A029C1E06F0073E265 /* OnlyCharManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				FAADB49C29C0833F0073E265 /* NoDigitsManager.swift in Sources */,
 				FAA2EA5C29B5138B00C561E9 /* InputLimitView.swift in Sources */,
 				FAADB49F29C1D4430073E265 /* InputLimitManager.swift in Sources */,
+				FAADB4A129C1E0700073E265 /* OnlyCharManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
