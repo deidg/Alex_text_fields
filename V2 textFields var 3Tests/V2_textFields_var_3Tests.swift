@@ -12,18 +12,20 @@ final class V2_textFields_var_3Tests: XCTestCase {
 
     var noDigitsManager: NoDigitsManager!
     var inputLimitManager: InputLimitManager!
-//    var OnlyCharManager: OnlyCharManager!
+    var onlyCharManager: OnlyCharManager!
     
     
     override func setUpWithError() throws {
         try super.setUpWithError()
         noDigitsManager = NoDigitsManager()
         inputLimitManager = InputLimitManager()
+        onlyCharManager = OnlyCharManager()
     }
 
     override func tearDownWithError() throws {
         noDigitsManager = nil
         inputLimitManager = nil
+        onlyCharManager = nil
         try super.tearDownWithError()
     }
 
@@ -32,7 +34,6 @@ final class V2_textFields_var_3Tests: XCTestCase {
         let result = noDigitsManager.isNoDigit(in: simple)
         XCTAssertTrue(result)
     }
-
     func testMaxLimit() throws {
         let inputText = "1234567890"//"1234567890VVV"//"1234567890"
         let result = inputLimitManager.isMaxLimit(in: inputText)
@@ -40,7 +41,11 @@ final class V2_textFields_var_3Tests: XCTestCase {
     }
     
     
-    
+    func testOnlyChar() throws {
+        let simple = "FGHYT-12345"
+        let result = onlyCharManager.isCharOnly(in: simple)
+        XCTAsser  //XCTAssertTrue(result)
+    }
     
     
     

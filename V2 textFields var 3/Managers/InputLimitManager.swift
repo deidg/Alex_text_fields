@@ -9,22 +9,12 @@ import Foundation
 import UIKit
 
 final class InputLimitManager {
-    
-//    init(<#parameters#>) {
-//        var charactersCounter: UILabel
-//        var currentText: String
-//
-//    }
-//
-    
     func isMaxLimit(in string: String) -> Bool {
-        
         var inputTextCount = string.count
-        
         if inputTextCount <= 10 {
             return true
         } else {
-           return false
+            return false
         }
     }
 }
