@@ -13,25 +13,19 @@ final class InputLimitManager {
 //    init(<#parameters#>) {
 //        var charactersCounter: UILabel
 //        var currentText: String
-//        
+//
 //    }
-//    
+//
     
-    func isMaxLimit(currentText: String, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    func isMaxLimit(in string: String) -> Bool {
         
-        //(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        //        let currentText = textField.text ?? ""
-        guard let stringRange = Range(range, in: currentText) else { return false }
-        let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
-        let lengthToAdd = updatedText.count
-        charactersCounter.text = "\(lengthToAdd)/10"
-        if lengthToAdd <= 10 {
-            charactersCounter.textColor = .black
+        var inputTextCount = string.count
+        
+        if inputTextCount <= 10 {
+            return true
         } else {
-            charactersCounter.textColor = .red
-            charactersCounter.text = "10/10"
+           return false
         }
-        return lengthToAdd <= 10
     }
 }
 

@@ -35,7 +35,7 @@ final class V2_textFields_var_3Tests: XCTestCase {
 
     func testMaxLimit() throws {
 //        let currentText = textField.text ?? ""
-        let result = inputLimitManager.
+        let result = inputLimitManager
         XCTAssertTrue(result)
     }
     
