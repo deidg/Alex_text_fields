@@ -9,10 +9,13 @@ import Foundation
 import JMMaskTextField_Swift
 
 final class OnlyCharManager {
+    
+ 
+
     func isCharOnly(in string: String) -> Bool {
         var inputText = string //JMMaskTextField(frame:CGRect.zero)
-        let placeHolderText = Constants.onlyCharTFSetup.onlyCharTFMaskString
-        
+        let placeHolderText = onlyCharTFSetup.onlyCharTFMaskString
+
         if inputText == placeHolderText {
             return true
         } else {
@@ -23,7 +26,7 @@ final class OnlyCharManager {
 
 //MARK: constants
 extension OnlyCharManager {
-    enum Constants {
+//    enum Constants {
 //        enum Constraints {
 //            static let topConstraint = 4
 //            static let topToViewConstraint = 7
@@ -49,5 +52,5 @@ extension OnlyCharManager {
 //        }
 //        enum TextFields {
 //            static let textFieldBackgroundColor = UIColor(red: 118/255, green: 118/255, blue: 128/255, alpha: 0.12)
-        }
+//        }
     }

@@ -29,6 +29,7 @@
 		FAADB49C29C0833F0073E265 /* NoDigitsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADB49B29C0833F0073E265 /* NoDigitsManager.swift */; };
 		FAADB49F29C1D4430073E265 /* InputLimitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADB49E29C1D4430073E265 /* InputLimitManager.swift */; };
 		FAADB4A129C1E0700073E265 /* OnlyCharManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADB4A029C1E06F0073E265 /* OnlyCharManager.swift */; };
+		FAADB4A329C238610073E265 /* LinkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAADB4A229C238600073E265 /* LinkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		FAADB49B29C0833F0073E265 /* NoDigitsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDigitsManager.swift; sourceTree = "<group>"; };
 		FAADB49E29C1D4430073E265 /* InputLimitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLimitManager.swift; sourceTree = "<group>"; };
 		FAADB4A029C1E06F0073E265 /* OnlyCharManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlyCharManager.swift; sourceTree = "<group>"; };
+		FAADB4A229C238600073E265 /* LinkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkManager.swift; sourceTree = "<group>"; };
 		FC8932A49F0497A45181E083 /* libPods-V2 textFields var 3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-V2 textFields var 3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -241,6 +243,7 @@
 				FAADB49B29C0833F0073E265 /* NoDigitsManager.swift */,
 				FAADB49E29C1D4430073E265 /* InputLimitManager.swift */,
 				FAADB4A029C1E06F0073E265 /* OnlyCharManager.swift */,
+				FAADB4A229C238600073E265 /* LinkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				FAA563D729B5BFFE000DF576 /* MainViewController.swift in Sources */,
 				FAA2EA6029B513CC00C561E9 /* LinkView.swift in Sources */,
 				FAADB49C29C0833F0073E265 /* NoDigitsManager.swift in Sources */,
+				FAADB4A329C238610073E265 /* LinkManager.swift in Sources */,
 				FAA2EA5C29B5138B00C561E9 /* InputLimitView.swift in Sources */,
 				FAADB49F29C1D4430073E265 /* InputLimitManager.swift in Sources */,
 				FAADB4A129C1E0700073E265 /* OnlyCharManager.swift in Sources */,
