@@ -32,13 +32,13 @@ final class V2_textFields_var_3Tests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    //MARK: link
-    func testLinkCkeck() throws {
-        let simple = "http://www.go0gle.com"
-        let result = linkManager.isBrowserStarted(in: simple)
+    //MARK: mask
+   
+    func testOnlyChar() throws {
+        let inPutText = "fghtr-12345"
+        let result = onlyCharManager.isCharOnly(in: inPutText)
         XCTAssertTrue(result)
     }
-    
     
     
     
@@ -61,7 +61,12 @@ final class V2_textFields_var_3Tests: XCTestCase {
         XCTAssertTrue(result)
     }
     
- 
+    //MARK: link
+    func testLinkCkeck() throws {
+        let simple = "http://www.google.c"
+        let result = linkManager.isLinkValid(simple)
+        XCTAssertTrue(result)
+    }
     
     
     
@@ -71,13 +76,8 @@ final class V2_textFields_var_3Tests: XCTestCase {
     
     
     
-    //MARK: mask
-    //не запустился. посмотреть в конце еще раз.
-//    func testOnlyChar() throws {
-//        let inPutText = "fghtr-12345"
-//        let result = onlyCharManager.isCharOnly(in: inPutText)
-//        XCTAssertTrue(result)
-//    }
+    
+
     
     
     

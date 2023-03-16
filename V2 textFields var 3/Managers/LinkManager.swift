@@ -9,18 +9,25 @@ import Foundation
 import UIKit
 
 final class LinkManager {
-    func isBrowserStarted(in string: String) -> Bool {
-        
-        let url = URL(string: string)
-        let result: Bool
-        
-        result = UIApplication.shared.open(url)
-        if result == true {
-            return true
-        } else {
-            return false
-        }
+    
+    private let linkRegex: String = "((?:http|https)://)?(?:www\\.)?(?:Www\\.)?(?:WWW\\.)?[\\w\\d\\-_]+\\.\\w{2,3}(\\.\\w{2})?(/(?<=/)(?:[\\w\\d\\-./_]+)?)?"
+    
+    func isLinkValid(_ link : String) -> Bool {
+        let linkTest = NSPredicate(format: "SELF MATCHES %@", linkRegex)
+        return linkTest.evaluate(with: link)
     }
+    
+    
+    
+    
+//    func verifyUrl (urlString: String?) -> Bool {
+//        if let urlString = urlString {
+//            if let url = NSURL(string: urlString) {
+//                return UIApplication.shared.canOpenURL(url as URL)
+//            }
+//        }
+//        return false
+//    }
 }
 
 
