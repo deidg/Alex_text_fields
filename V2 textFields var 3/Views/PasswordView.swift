@@ -140,6 +140,7 @@ extension PasswordView: UITextFieldDelegate {
         if let text = passwordTextField.text,
            let textRange = Range(range, in: text) {
             let updatedText = text.replacingCharacters(in: textRange, with: string)
+            
             let decimalCharacters = CharacterSet.decimalDigits
             let decimalRange = updatedText.rangeOfCharacter(from: decimalCharacters)
             if decimalRange != nil {

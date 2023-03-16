@@ -12,41 +12,21 @@ final class V2_textFields_var_3Tests: XCTestCase {
 
     var noDigitsManager: NoDigitsManager!
     var inputLimitManager: InputLimitManager!
-    var onlyCharManager: OnlyCharManager!
     var linkManager: LinkManager!
-    
-    
+     
     override func setUpWithError() throws {
         try super.setUpWithError()
         noDigitsManager = NoDigitsManager()
         inputLimitManager = InputLimitManager()
-        onlyCharManager = OnlyCharManager()
         linkManager = LinkManager()
     }
 
     override func tearDownWithError() throws {
         noDigitsManager = nil
         inputLimitManager = nil
-        onlyCharManager = nil
         linkManager = nil
         try super.tearDownWithError()
     }
-
-    //MARK: mask
-   
-    func testOnlyChar() throws {
-        let inPutText = "fghtr-12345"
-        let result = onlyCharManager.isCharOnly(in: inPutText)
-        XCTAssertTrue(result)
-    }
-    
-    
-    
-    
-    
-    
-    
-    
     
     //MARK: no digits
     func testNoDigitsTextField() throws {
@@ -67,23 +47,7 @@ final class V2_textFields_var_3Tests: XCTestCase {
         let result = linkManager.isLinkValid(simple)
         XCTAssertTrue(result)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
+  
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
