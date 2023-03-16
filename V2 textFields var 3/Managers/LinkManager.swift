@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class LinkManager {
     //    func isLinkValid(in string: String) -> Bool {
@@ -27,8 +28,8 @@ final class LinkManager {
         
 //        if let urlString = string //self.linkTextField.text {
             let urlString = string //self.linkTextField.text {
-
             let url: URL?
+        
             if urlString.hasPrefix("http://") {
                 url = URL(string: urlString)
             } else if urlString.hasPrefix("https://") {
@@ -37,14 +38,13 @@ final class LinkManager {
                 url = URL(string: "http://" + urlString)
             }
             if let url = url {
-//                self.delegate?.openURL(url: url)
-//                openURL(url: url)
-//
-//            }
+//                self.openURL(url: url)
+                UIApplication.shared.open(url)
+            }
 //        }
 //    }
-    startBrowser(self.linkTextField)
-}
+//    startBrowser(self.linkTextField)
+//}
 return true
 }
 //            } else {
