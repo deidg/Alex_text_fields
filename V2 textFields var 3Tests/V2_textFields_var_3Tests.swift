@@ -55,8 +55,8 @@ final class V2_textFields_var_3Tests: XCTestCase {
     
     //MARK: link
     func testLinkCkeck() throws {
-        let simple = "bbc.com"
-        let result = linkManager.isBrowserStarted(in: simple)
+        let simple = "go0gle.com"
+        let result = linkManager.isBrowserStarted(in: simple) 
         XCTAssertTrue(result)
     }
     
