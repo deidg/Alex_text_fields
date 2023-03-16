@@ -32,6 +32,22 @@ final class V2_textFields_var_3Tests: XCTestCase {
         try super.tearDownWithError()
     }
 
+    //MARK: link
+    func testLinkCkeck() throws {
+        let simple = "http://www.go0gle.com"
+        let result = linkManager.isBrowserStarted(in: simple)
+        XCTAssertTrue(result)
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     //MARK: no digits
     func testNoDigitsTextField() throws {
         let simple = "fddgf"
@@ -40,25 +56,28 @@ final class V2_textFields_var_3Tests: XCTestCase {
     }
     //MARK: limit
     func testMaxLimit() throws {
-        let inputText = "1234567890"//"1234567890VVV"//"1234567890"
+        let inputText = "1234567890"
         let result = inputLimitManager.isMaxLimit(in: inputText)
         XCTAssertTrue(result)
     }
     
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
     //MARK: mask
-    //не запустился. посмотреть в конце еще раз. 
+    //не запустился. посмотреть в конце еще раз.
 //    func testOnlyChar() throws {
 //        let inPutText = "fghtr-12345"
 //        let result = onlyCharManager.isCharOnly(in: inPutText)
 //        XCTAssertTrue(result)
 //    }
-    
-    //MARK: link
-    func testLinkCkeck() throws {
-        let simple = "go0gle.com"
-        let result = linkManager.isBrowserStarted(in: simple) 
-        XCTAssertTrue(result)
-    }
     
     
     

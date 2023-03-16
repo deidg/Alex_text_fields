@@ -10,50 +10,21 @@ import UIKit
 
 final class LinkManager {
     func isBrowserStarted(in string: String) -> Bool {
-        let url = URL(string: string)!
         
-        UIApplication.shared.open(url) 
-
-        return true
+        let url = URL(string: string)
+        let result: Bool
+        
+        result = UIApplication.shared.open(url)
+        if result == true {
+            return true
+        } else {
+            return false
+        }
     }
 }
-    
-    
-    
-    
-    
-    
-    //            let url: URL?
-    
-    //            if urlString.hasPrefix("http://") {
-    //                url = URL(string: urlString)
-    //            } else if urlString.hasPrefix("https://") {
-    //                url = URL(string: urlString)
-    //            } else {
-    //                url = URL(string: "http://" + urlString)
-    //            }
-    //            let url = urlString
-    //        if url {
-    //                self.openURL(url: url)
-    //        if UIApplication.shared.open(urlString) {
-    //            return true
-    //            } else {
-    //                return false
-    //    }
-    //        }
-    //    }
-    //    startBrowser(self.linkTextField)
-    //}
-    //return true
-    //}
-    ////            } else {
-    ////                print("NOT valid link")
-    ////            }
-    ////        }
-    ////        return true
-    //}
-    
-    //    }
-    //}
-    //}
+
+
+
+
+
 
