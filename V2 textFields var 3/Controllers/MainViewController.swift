@@ -93,7 +93,6 @@ final class MainViewController: UIViewController {
         linkView.delegate = self
     }
 }
-
 //MARK: extension ViewController - keyboard
 extension MainViewController {
     private func addTapToHideKeyboard() {
@@ -120,7 +119,6 @@ extension MainViewController {
         var contentInset: UIEdgeInsets = self.scrollView.contentInset
         contentInset.bottom = keyboardFrame.size.height
         scrollView.contentInset = contentInset
-        
     }
     @objc private func keyboardWillHide(sender: NSNotification) {
         let contentInset: UIEdgeInsets = UIEdgeInsets.zero
@@ -136,7 +134,6 @@ extension MainViewController: LinkViewDelegate {
         UIApplication.shared.open(url)
     }
 }
-
 extension MainViewController {
     //MARK: extension ViewController -  Constants
     enum Constants {

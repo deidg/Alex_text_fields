@@ -9,25 +9,22 @@ import XCTest
 @testable import V2_textFields_var_3
 
 final class V2_textFields_var_3Tests: XCTestCase {
-
     var noDigitsManager: NoDigitsManager!
     var inputLimitManager: InputLimitManager!
     var linkManager: LinkManager!
-     
+    
     override func setUpWithError() throws {
         try super.setUpWithError()
         noDigitsManager = NoDigitsManager()
         inputLimitManager = InputLimitManager()
         linkManager = LinkManager()
     }
-
     override func tearDownWithError() throws {
         noDigitsManager = nil
         inputLimitManager = nil
         linkManager = nil
         try super.tearDownWithError()
     }
-    
     //MARK: no digits
     func testNoDigitsTextField() throws {
         let simple = "fddgf"
@@ -40,19 +37,16 @@ final class V2_textFields_var_3Tests: XCTestCase {
         let result = inputLimitManager.isMaxLimit(in: inputText)
         XCTAssertTrue(result)
     }
-    
     //MARK: link
     func testLinkCkeck() throws {
-        let simple = "http://www.google.c"
+        let simple = "http://www.google.com"
         let result = linkManager.isLinkValid(simple)
         XCTAssertTrue(result)
     }
-  
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

@@ -16,7 +16,6 @@ protocol LinkViewDelegate: AnyObject {
 final class LinkView: UIView {
     weak var delegate: LinkViewDelegate?
     private let linkRegex: String = "((?:http|https)://)?(?:www\\.)?(?:Www\\.)?(?:WWW\\.)?[\\w\\d\\-_]+\\.\\w{2,3}(\\.\\w{2})?(/(?<=/)(?:[\\w\\d\\-./_]+)?)?"
-    
     //MARK: UI Elements
     private let linkLabel: UILabel = {
         let linkLabel = UILabel()
@@ -40,7 +39,6 @@ final class LinkView: UIView {
         linkTextField.keyboardType = .URL
         return linkTextField
     }()
-    
     //MARK: Initialization
     init() {
         super.init(frame: .zero)
@@ -78,16 +76,16 @@ final class LinkView: UIView {
 }
 
 //MARK: linkTextFieldDelegate
-extension LinkView: UITextFieldDelegate  {
+extension LinkView: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == linkTextField {
             let link = linkTextField.text ?? ""
-            func isLinkValid(_ link : String) -> Bool {
+            func isLinkValid(_ link: String) -> Bool {
                 let linkTest = NSPredicate(format: "SELF MATCHES %@", linkRegex)
                 return linkTest.evaluate(with: link)
             }
             if isLinkValid(link) {
-                let delay : Double = 2.0
+                let delay: Double = 2.0
                 DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                     func startBrowser(_ sender: Any) {
                         if let urlString = self.linkTextField.text {

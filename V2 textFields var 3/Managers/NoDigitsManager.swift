@@ -14,4 +14,3 @@ final class NoDigitsManager {
         return allowedCharacters.isSuperset(of: charSet)
     }
 }
-

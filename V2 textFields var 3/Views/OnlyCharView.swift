@@ -32,7 +32,6 @@ final class OnlyCharView: UIView {
         onlyCharTextField.placeholder = Constants.onlyCharTFSetup.onlyCharTFPlaceHolder
         return onlyCharTextField
     }()
-    
     //MARK: Initialization
     init() {
         super.init(frame: .zero)
@@ -69,7 +68,7 @@ final class OnlyCharView: UIView {
 }
 
 //MARK: onlyCharTextFieldDelegate
-extension OnlyCharView: UITextFieldDelegate  {
+extension OnlyCharView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         let allowedCharacters = CharacterSet.decimalDigits.inverted
         let charSet = CharacterSet(charactersIn: string)

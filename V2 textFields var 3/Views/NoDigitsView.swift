@@ -68,7 +68,6 @@ final class NoDigitsView: UIView {
         noDigitsTextField.delegate = self
     }
 }
-
 //MARK: noDigitsTextFieldDelegate
 extension NoDigitsView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -109,5 +108,3 @@ extension NoDigitsView {
         }
     }
 }
-
-

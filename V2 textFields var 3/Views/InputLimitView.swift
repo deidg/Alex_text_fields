@@ -42,7 +42,6 @@ final class InputLimitView: UIView {
         inputLimitTextField.font = Constants.TextFields.textFieldFont
         return inputLimitTextField
     }()
-    
     //MARK: Initialization
     init() {
         super.init(frame: .zero)
@@ -58,7 +57,7 @@ final class InputLimitView: UIView {
         inputLimitLabel.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.leading.trailing.equalToSuperview()
-            make.height.equalTo(Constants.Constraints.labelHeightConstraint) 
+            make.height.equalTo(Constants.Constraints.labelHeightConstraint)
         }
         addSubview(charactersCounter)
         charactersCounter.snp.makeConstraints { make in
@@ -79,17 +78,14 @@ final class InputLimitView: UIView {
             make.height.equalTo(Constants.Constraints.textfieldHeightConstraint)
         }
     }
-    
     private func defaultConfiguration() {
         backgroundColor = .white
         inputLimitTextField.delegate = self
     }
 }
-
 //MARK: inputLimitTextFieldDelegate
-extension InputLimitView: UITextFieldDelegate  {
+extension InputLimitView: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
         let currentText = textField.text ?? ""
         guard let stringRange = Range(range, in: currentText) else { return false }
         let updatedText = currentText.replacingCharacters(in: stringRange, with: string)
@@ -104,7 +100,6 @@ extension InputLimitView: UITextFieldDelegate  {
         return lengthToAdd <= 10
     }
 }
-
 //MARK: constants
 extension InputLimitView {
     enum Constants {
