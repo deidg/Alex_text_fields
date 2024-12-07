@@ -9,7 +9,7 @@ One page app with text fields which:
 * allow only letters, not digits
 * have input symbols limit (max. 10)
 * allow to input 5 letters and 5 digits
-* checks if input data is a valid link
+* checks input data for a valid link (open browser)
 * check input data for compliance with established criteria
 
 
